@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Consumer Pulse — daily macro identity of the American shopper</title>
+<meta name="description" content="Daily-refreshing dashboard of the US consumer: inflation, wages vs prices, jobs, retail employment, and state incomes. 100% free public-domain government data. By Shubham Safaya.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='9' cy='10' r='3' fill='%23c9a96e'/%3E%3Ccircle cx='23' cy='8' r='2' fill='%23c9a96e' opacity='.6'/%3E%3Ccircle cx='20' cy='23' r='2.5' fill='%23c9a96e' opacity='.8'/%3E%3Cpath d='M9 10L23 8M9 10l11 13M23 8l-3 15' stroke='%23c9a96e' stroke-width='.8' opacity='.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#070708;--card:#101014;--bdr:#1c1c22;--gold:#c9a96e;--gold-hi:#e8cfa0;
+  --ink:#e9e5dc;--txt:#b9b4a9;--mut:#807c73;--dim:#55524c;
+  --green:#4ade80;--red:#f87171}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:#000}
+a{color:var(--gold);text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 22px 80px}
+header h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(30px,5.5vw,52px);color:var(--ink);line-height:1.08;letter-spacing:-.02em}
+header h1 em{font-style:italic;color:var(--gold-hi)}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;margin-bottom:16px;display:block}
+.sub{margin-top:14px;font-size:15px;line-height:1.8;max-width:62ch;color:var(--txt)}
+.updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);margin-top:14px;letter-spacing:.1em}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;margin:38px 0 8px}
+.tile{background:#0b0b0e;padding:22px 16px;text-align:center}
+.tile .v{font-family:'Fraunces',serif;font-size:clamp(22px,3vw,32px);color:var(--gold-hi)}
+.tile .v.bad{color:var(--red)} .tile .v.good{color:var(--green)}
+.tile .l{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--mut);letter-spacing:.2em;text-transform:uppercase;margin-top:7px}
+.tile .d{font-size:11px;color:var(--dim);margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:16px}
+.panel{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:20px}
+.panel h2{font-family:'Fraunces',serif;font-weight:500;font-size:17px;color:var(--ink);margin-bottom:4px}
+.panel .note{font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.6}
+.panel canvas{max-height:230px}
+.states{margin-top:16px}
+.staterow{display:flex;align-items:center;gap:10px;padding:6px 4px;font-size:13px}
+.staterow .name{width:150px;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.staterow .bar{height:8px;border-radius:4px;background:linear-gradient(90deg,#8a6d3b,var(--gold))}
+.staterow .val{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut);white-space:nowrap}
+footer{margin-top:46px;border-top:1px solid var(--bdr);padding-top:22px;font-size:12px;color:var(--dim);line-height:1.9}
+footer .legal{margin-top:10px;font-size:11px}
+.byline{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="kicker">US Consumer Pulse · refreshes daily</span>
+  <h1>The macro identity of the <em>American shopper</em></h1>
+  <p class="sub">Identity resolution tells you <b style="color:var(--ink)">who</b> the customer is.
+    This dashboard tracks <b style="color:var(--ink)">how they're doing</b>: what prices are doing to their wallet,
+    whether wages are keeping up, and how secure their paychecks are. 100% free, public-domain US government data,
+    refreshed every morning by a GitHub Action.</p>
+  <div class="updated" id="updated">Loading…</div>
+</header>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="grid">
+  <div class="panel"><h2>Inflation: the price of being a consumer</h2>
+    <div class="note">Year-over-year change in CPI. Headline vs the categories families feel weekly.</div>
+    <canvas id="chartInflation"></canvas></div>
+  <div class="panel"><h2>Wages vs prices: real purchasing power</h2>
+    <div class="note">Average hourly earnings growth minus inflation. Below zero = the average paycheck is losing ground.</div>
+    <canvas id="chartRealWage"></canvas></div>
+  <div class="panel"><h2>Jobs: how safe is the paycheck</h2>
+    <div class="note">Unemployment rate and labor-force participation.</div>
+    <canvas id="chartJobs"></canvas></div>
+  <div class="panel"><h2>Retail employment: the sector that serves the shopper</h2>
+    <div class="note">Retail trade payrolls, thousands of jobs (BLS CES).</div>
+    <canvas id="chartRetail"></canvas></div>
+</div>
+
+<div class="panel states">
+  <h2>Where the money lives: median household income by state</h2>
+  <div class="note">Top 12 states by median household income (Census ACS 1-year).</div>
+  <div id="stateList">Awaiting first Census refresh…</div>
+</div>
+
+<footer>
+  <b style="color:var(--txt)">Sources & method.</b> Bureau of Labor Statistics Public Data API (CPI-U series CUUR0000SA0/SAF1/SETB01/SAH1; LNS14000000; LNS11300000; CES0500000003; CES4200000001) and US Census Bureau ACS 1-year estimates. Pulled daily at 11:00 UTC by <a href="https://github.com/Shubham-Safaya/us-consumer-pulse" rel="noopener">an open-source GitHub Action</a>; derived metrics (YoY, real wages) computed in the open.
+  <div class="legal">All data are US federal government works in the public domain (17 U.S.C. §105) accessed through official public APIs within their terms of use. Aggregate statistics only — no personal data is collected, stored, or processed, so no CCPA/GDPR exposure. This page sets no cookies and runs no trackers.</div>
+  <div class="byline">BUILT BY <a href="https://shubham-safaya.github.io">SHUBHAM SAFAYA</a> · SENIOR PM, IDENTITY & ADS PERSONALIZATION · <a href="https://www.linkedin.com/in/shubham-safaya/">LINKEDIN</a> · <a href="https://github.com/Shubham-Safaya">GITHUB</a></div>
+</footer>
+</div>
+
+<script>
+const GOLD='#c9a96e', INK='#b9b4a9', GRID='#1c1c22';
+Chart.defaults.color=INK; Chart.defaults.borderColor=GRID;
+Chart.defaults.font.family='Inter'; Chart.defaults.font.size=11;
+
+const line=(ds)=>({type:'line',data:ds,options:{
+  responsive:true,interaction:{mode:'index',intersect:false},
+  plugins:{legend:{labels:{boxWidth:10,boxHeight:2}}},
+  elements:{point:{radius:0},line:{tension:.35,borderWidth:2}},
+  scales:{x:{grid:{display:false},ticks:{maxTicksLimit:8}},y:{grid:{color:GRID}}}}});
+
+const tail=(s,n=30)=>s.slice(-n);
+const lbl=(s)=>tail(s).map(p=>p.date);
+const val=(s)=>tail(s).map(p=>p.value);
+
+fetch('data/data.json').then(r=>r.json()).then(d=>{
+  document.getElementById('updated').textContent='LAST REFRESH: '+(d.updated||'n/a');
+  const S=d.series||{}, D=d.derived||{};
+  const last=(s)=>s&&s.length?s[s.length-1].value:null;
+
+  const infl=last(D.inflation_yoy), rw=last(D.real_wage_growth),
+        un=last(S.unemployment_rate), gas=last(D.gas_inflation_yoy),
+        food=last(D.food_inflation_yoy), wage=last(D.wage_growth_yoy);
+
+  const tiles=[
+    {v:infl,f:v=>v.toFixed(1)+'%',l:'CPI inflation YoY',d:'all items',bad:v=>v>3,good:v=>v<2.5},
+    {v:food,f:v=>v.toFixed(1)+'%',l:'Food inflation',d:'groceries + dining',bad:v=>v>3},
+    {v:gas,f:v=>v.toFixed(0)+'%',l:'Gas prices YoY',d:'pump pain gauge',bad:v=>v>10,good:v=>v<0},
+    {v:wage,f:v=>v.toFixed(1)+'%',l:'Wage growth YoY',d:'avg hourly earnings',good:v=>v>4},
+    {v:rw,f:v=>(v>0?'+':'')+v.toFixed(1)+'%',l:'Real wage growth',d:'wages minus inflation',bad:v=>v<0,good:v=>v>1},
+    {v:un,f:v=>v.toFixed(1)+'%',l:'Unemployment',d:'U-3 rate',bad:v=>v>5,good:v=>v<4},
+  ];
+  document.getElementById('tiles').innerHTML=tiles.map(t=>{
+    if(t.v==null)return '';
+    const cls=(t.bad&&t.bad(t.v))?'bad':(t.good&&t.good(t.v))?'good':'';
+    return `<div class="tile"><div class="v ${cls}">${t.f(t.v)}</div><div class="l">${t.l}</div><div class="d">${t.d}</div></div>`;
+  }).join('');
+
+  if(D.inflation_yoy) new Chart(chartInflation, line({labels:lbl(D.inflation_yoy),datasets:[
+    {label:'All items',data:val(D.inflation_yoy),borderColor:GOLD},
+    {label:'Food',data:val(D.food_inflation_yoy||[]),borderColor:'#4ade80'},
+    {label:'Shelter',data:val(D.shelter_inflation_yoy||[]),borderColor:'#60a5fa'},
+    {label:'Gas',data:val(D.gas_inflation_yoy||[]),borderColor:'#f87171'}]}));
+
+  if(D.real_wage_growth) new Chart(chartRealWage, line({labels:lbl(D.real_wage_growth),datasets:[
+    {label:'Real wage growth (pp)',data:val(D.real_wage_growth),borderColor:GOLD,
+     fill:{target:{value:0},above:'rgba(74,222,128,.08)',below:'rgba(248,113,113,.10)'}}]}));
+
+  if(S.unemployment_rate) new Chart(chartJobs, line({labels:lbl(S.unemployment_rate),datasets:[
+    {label:'Unemployment %',data:val(S.unemployment_rate),borderColor:'#f87171'},
+    {label:'Participation %',data:val(S.participation_rate||[]),borderColor:GOLD,yAxisID:'y1'}]}));
+  Chart.getChart(chartJobs)&&(Chart.getChart(chartJobs).options.scales.y1={position:'right',grid:{display:false}});
+
+  if(S.retail_employment) new Chart(chartRetail, line({labels:lbl(S.retail_employment),datasets:[
+    {label:'Retail jobs (thousands)',data:val(S.retail_employment),borderColor:GOLD}]}));
+
+  if(d.states&&d.states.length){
+    const top=d.states.slice(0,12), max=top[0].median_income;
+    document.getElementById('stateList').innerHTML=top.map(s=>
+      `<div class="staterow"><span class="name">${s.state}</span>
+       <span class="bar" style="width:${(s.median_income/max*55).toFixed(1)}%"></span>
+       <span class="val">$${s.median_income.toLocaleString()} · ${(s.population/1e6).toFixed(1)}M people</span></div>`).join('');
+  }
+}).catch(e=>{document.getElementById('updated').textContent='Data load failed: '+e;});
+</script>
+</body>
+</html>
