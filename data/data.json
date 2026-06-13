@@ -2004,5 +2004,92 @@
    }
   ]
  },
- "states": []
+ "states": [
+  {
+   "state": "District of Columbia",
+   "median_income": 108210,
+   "population": 700000
+  },
+  {
+   "state": "Massachusetts",
+   "median_income": 99858,
+   "population": 7000000
+  },
+  {
+   "state": "New Jersey",
+   "median_income": 99781,
+   "population": 9300000
+  },
+  {
+   "state": "Maryland",
+   "median_income": 98678,
+   "population": 6200000
+  },
+  {
+   "state": "New Hampshire",
+   "median_income": 96838,
+   "population": 1400000
+  },
+  {
+   "state": "California",
+   "median_income": 95521,
+   "population": 38900000
+  },
+  {
+   "state": "Hawaii",
+   "median_income": 95322,
+   "population": 1400000
+  },
+  {
+   "state": "Washington",
+   "median_income": 94605,
+   "population": 7800000
+  },
+  {
+   "state": "Utah",
+   "median_income": 93421,
+   "population": 3400000
+  },
+  {
+   "state": "Colorado",
+   "median_income": 92911,
+   "population": 5900000
+  },
+  {
+   "state": "Connecticut",
+   "median_income": 91665,
+   "population": 3600000
+  },
+  {
+   "state": "Virginia",
+   "median_income": 89931,
+   "population": 8700000
+  },
+  {
+   "state": "Alaska",
+   "median_income": 88121,
+   "population": 700000
+  },
+  {
+   "state": "Minnesota",
+   "median_income": 85086,
+   "population": 5700000
+  },
+  {
+   "state": "New York",
+   "median_income": 82095,
+   "population": 19600000
+  },
+  {
+   "state": "Rhode Island",
+   "median_income": 81854,
+   "population": 1100000
+  },
+  {
+   "state": "Oregon",
+   "median_income": 80426,
+   "population": 4200000
+  }
+ ],
+ "states_source": "2023 public-domain snapshot"
 }

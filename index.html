@@ -148,6 +148,10 @@ fetch('data/data.json').then(r=>r.json()).then(d=>{
       `<div class="staterow"><span class="name">${s.state}</span>
        <span class="bar" style="width:${(s.median_income/max*55).toFixed(1)}%"></span>
        <span class="val">$${s.median_income.toLocaleString()} · ${(s.population/1e6).toFixed(1)}M people</span></div>`).join('');
+    if(d.states_source){
+      const n=document.querySelector('.states .note');
+      if(n) n.textContent='Top 12 states by median household income (Census ACS 1-year, '+d.states_source+').';
+    }
   }
 }).catch(e=>{document.getElementById('updated').textContent='Data load failed: '+e;});
 </script>
