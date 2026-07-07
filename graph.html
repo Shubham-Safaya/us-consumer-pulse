@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Synthetic Identity Graph — US Consumer Pulse</title>
+<meta name="description" content="A 100,000-person synthetic population resolved with an open-source identity engine — match rates, precision vs manufactured ground truth, and an inspectable household linkage demo. No real individuals.">
+<style>body{font-family:-apple-system,'Segoe UI',sans-serif;max-width:860px;margin:0 auto;padding:20px;color:#16181d;line-height:1.55}
+h1{font-size:1.5rem}h2{font-size:1.1rem;margin-top:24px}.banner{background:#eef6ff;border:1px solid #a9c8ec;border-radius:8px;padding:10px;font-size:13px;margin:12px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0}
+.card{background:#f7f7f3;border:1px solid #ddd;border-radius:10px;padding:12px;text-align:center}
+.num{font-size:1.4rem;font-weight:700}.lbl{font-size:.62rem;text-transform:uppercase;color:#777;letter-spacing:.07em}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:8px 0}td,th{border:1px solid #e2e2dc;padding:7px;text-align:left}
+th{background:#f4f4f0}select{padding:8px;border-radius:8px;border:1px solid #ccc;font-size:14px}
+.rec{background:#fff;border:1px solid #e2e2dc;border-radius:8px;padding:8px;margin:6px 0;font-size:12.5px;font-family:ui-monospace,monospace}
+.ok{color:#2f7d4f;font-weight:700}.bad{color:#b3372f;font-weight:700}.edge{font-size:12px;color:#555;margin-left:12px}
+.lesson{background:#fff8e6;border:1px solid #e6c96e;border-radius:8px;padding:12px;font-size:13.5px}</style></head><body>
+<h1>The synthetic identity graph</h1>
+<p class="banner"><strong>100% synthetic population; no real individuals; methodology demonstration.</strong>
+Every person, email, phone and address below was manufactured from public Census aggregate distributions.
+Resolution runs on <a href="https://github.com/Shubham-Safaya/identity-resolution-engine">identity-resolver</a>, my open-source engine.
+All numbers are precomputed and committed — this page is static.</p>
+<div class="cards" id="cards">loading…</div>
+<h2>The lesson: thresholds are business decisions</h2>
+<div class="lesson" id="lesson"></div>
+<table id="cmp"></table>
+<h2>Inspect a synthetic household</h2>
+<p style="font-size:13px;color:#555">Pick a household: see each member's fragmented records, whether the engine correctly unified them, and exactly which rule linked each pair — the explainability the industry rarely shows.</p>
+<select id="hh"></select>
+<div id="detail"></div>
+<p style="font-size:12px;color:#777;margin-top:20px"><a href="index.html">← pulse</a> · <a href="personas.html">persona builder</a> · <a href="competitors.html">landscape</a> ·
+regenerate: <code>python3 scripts/build_synthetic_graph.py</code></p>
+<script>
+(async () => {
+  const [R, S] = await Promise.all([
+    fetch("data/synthetic/results.json").then(r=>r.json()),
+    fetch("data/synthetic/sample-households.json").then(r=>r.json())]);
+  const c = (n,l)=>`<div class="card"><div class="num">${n}</div><div class="lbl">${l}</div></div>`;
+  const gt = R.vs_ground_truth, res = R.resolution, pop = R.population;
+  document.getElementById("cards").innerHTML =
+    c(pop.persons.toLocaleString(),"synthetic persons") + c(pop.households.toLocaleString(),"households") +
+    c(pop.records.toLocaleString(),"messy records") + c(res.clusters.toLocaleString(),"resolved identities") +
+    c((100*gt.pairwise_precision).toFixed(1)+"%","precision vs truth") + c((100*gt.pairwise_recall).toFixed(1)+"%","recall vs truth");
+  document.getElementById("lesson").textContent = R.config_comparison.lesson;
+  const d0 = R.config_comparison["default_threshold_0.65"], d1 = R.config_comparison["tuned_threshold_0.92"];
+  document.getElementById("cmp").innerHTML = `<tr><th>Config</th><th>Pairwise precision</th><th>Pairwise recall</th></tr>
+    <tr><td>Default (threshold 0.65)</td><td class="bad">${(100*d0.pairwise_precision).toFixed(1)}%</td><td>${(100*d0.pairwise_recall).toFixed(1)}%</td></tr>
+    <tr><td>Tuned (threshold 0.92)</td><td class="ok">${(100*d1.pairwise_precision).toFixed(1)}%</td><td>${(100*d1.pairwise_recall).toFixed(1)}%</td></tr>`;
+  const sel = document.getElementById("hh");
+  sel.innerHTML = S.map((h,i)=>`<option value="${i}">${h.hhid} — ${h.members.length} members, ${h.state}</option>`).join("");
+  const render = i => {
+    const h = S[i];
+    document.getElementById("detail").innerHTML = `<p style="font-size:13px"><strong>${h.hhid}</strong> · ${h.addr_display} · ${h.state}</p>` +
+      h.members.map(m=>`
+        <div style="border-left:3px solid ${m.correctly_unified===false?"#b3372f":"#2f7d4f"};padding-left:10px;margin:14px 0">
+          <strong>${m.name}</strong> <span style="font-family:monospace;font-size:11px;color:#888">${m.pid} → cluster ${m.cluster_id||"—"}</span>
+          ${m.correctly_unified===false?'<span class="bad"> ✗ engine split this person</span>':m.records.length>1?'<span class="ok"> ✓ correctly unified</span>':' <span style="color:#888">(single record)</span>'}
+          ${m.records.map(r=>`<div class="rec">[${r.source}] ${r.name} · ${r.email||"—"} · ${r.phone||"—"}</div>`).join("")}
+          ${m.match_edges.map(e=>`<div class="edge">↳ ${e.a} ↔ ${e.b}: <strong>${e.type}</strong> on ${e.fields.join("+")} (score ${e.score})</div>`).join("")}
+        </div>`).join("");
+  };
+  sel.onchange = e => render(e.target.value); render(0);
+})();
+</script></body></html>

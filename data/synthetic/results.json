@@ -1,0 +1,47 @@
+{
+  "generated": "2026-07-07",
+  "banner": "100% synthetic population; no real individuals; methodology demonstration.",
+  "engine": "identity-resolver (github.com/Shubham-Safaya/identity-resolution-engine)",
+  "population": {
+    "persons": 100000,
+    "households": 41120,
+    "records": 185034,
+    "household_size_dist": {
+      "3": 6190,
+      "1": 11517,
+      "2": 14342,
+      "5": 2455,
+      "4": 5371,
+      "6": 1245
+    }
+  },
+  "resolution": {
+    "clusters": 96585,
+    "resolution_rate": 0.807,
+    "deterministic_matches": 105871,
+    "probabilistic_matches": 9679,
+    "dedup_rate": 0.478,
+    "largest_cluster": 15
+  },
+  "config_comparison": {
+    "default_threshold_0.65": {
+      "pairwise_precision": 0.2185,
+      "pairwise_recall": 0.9861
+    },
+    "tuned_threshold_0.92": {
+      "pairwise_precision": 0.807,
+      "pairwise_recall": 0.9707
+    },
+    "lesson": "The default threshold over-merges realistic households (shared surnames + addresses + family emails). Raising the probabilistic threshold to 0.92 recovers precision at minimal recall cost. Residual false merges are shared-household emails matched deterministically - the fix is identifier-frequency capping (engine roadmap).",
+    "_note": "tuned numbers repeated in vs_ground_truth"
+  },
+  "vs_ground_truth": {
+    "pairwise_precision": 0.807,
+    "pairwise_recall": 0.9707,
+    "true_pairs": 105018,
+    "found_true_pairs": 101946,
+    "false_merged_pairs": 24386,
+    "note": "Computable ONLY because the truth is manufactured \u2014 the entire point of synthetic benchmarking."
+  },
+  "runtime_seconds": 50.8
+}

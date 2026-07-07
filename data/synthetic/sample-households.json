@@ -1,0 +1,4482 @@
+[
+  {
+    "hhid": "HH000000",
+    "state": "TX",
+    "addr_display": "4507 Cedar Ln (synthetic)",
+    "members": [
+      {
+        "pid": "P000000",
+        "name": "Justin Walker",
+        "records": [
+          {
+            "id": "r0000000",
+            "source": "store",
+            "email": null,
+            "phone": null,
+            "name": "justin walker"
+          },
+          {
+            "id": "r0000001",
+            "source": "web",
+            "email": "justin.walker4@example-mail.test",
+            "phone": "5554903402",
+            "name": "justin walker"
+          },
+          {
+            "id": "r0000002",
+            "source": "crm",
+            "email": null,
+            "phone": "5554903402",
+            "name": "justin walker"
+          }
+        ],
+        "cluster_id": "8bb9bf8e",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000001",
+            "b": "r0000002",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000001",
+            "b": "r0000000",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000002",
+            "b": "r0000000",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000002",
+            "b": "r0000003",
+            "type": "probabilistic",
+            "score": 0.921,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000002",
+            "b": "r0000004",
+            "type": "probabilistic",
+            "score": 0.921,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000001",
+        "name": "Stephen Walker",
+        "records": [
+          {
+            "id": "r0000003",
+            "source": "store",
+            "email": "stephen.walker84@example-mail.test",
+            "phone": null,
+            "name": "stephen walker"
+          },
+          {
+            "id": "r0000004",
+            "source": "crm",
+            "email": "stephen.walker84@example-mail.test",
+            "phone": null,
+            "name": "stephen walker"
+          },
+          {
+            "id": "r0000005",
+            "source": "web",
+            "email": "stephen.walker84@example-mail.test",
+            "phone": null,
+            "name": "stephen walker"
+          }
+        ],
+        "cluster_id": "8bb9bf8e",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000002",
+            "b": "r0000003",
+            "type": "probabilistic",
+            "score": 0.921,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000002",
+            "b": "r0000004",
+            "type": "probabilistic",
+            "score": 0.921,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000005",
+            "b": "r0000003",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000005",
+            "b": "r0000004",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000004",
+            "b": "r0000003",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000002",
+        "name": "Emily Walker",
+        "records": [
+          {
+            "id": "r0000006",
+            "source": "web",
+            "email": "emily.walker1@example-mail.test",
+            "phone": null,
+            "name": "emily walker"
+          },
+          {
+            "id": "r0000007",
+            "source": "crm",
+            "email": "emily.walker1@example-mail.test",
+            "phone": null,
+            "name": "emily walker"
+          }
+        ],
+        "cluster_id": "433f141e",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000006",
+            "b": "r0000007",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000003",
+    "state": "TX",
+    "addr_display": "2804 Cedar Ln (synthetic)",
+    "members": [
+      {
+        "pid": "P000007",
+        "name": "Frank Turner",
+        "records": [
+          {
+            "id": "r0000013",
+            "source": "crm",
+            "email": "frank.turner99@example-mail.test",
+            "phone": null,
+            "name": "frank turner"
+          },
+          {
+            "id": "r0000014",
+            "source": "web",
+            "email": "frank.turner99@example-mail.test",
+            "phone": null,
+            "name": "frank turner"
+          },
+          {
+            "id": "r0000015",
+            "source": "store",
+            "email": "frank.turner99@example-mail.test",
+            "phone": null,
+            "name": "frank turner"
+          }
+        ],
+        "cluster_id": "d141c3fe",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000015",
+            "b": "r0000013",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000015",
+            "b": "r0000014",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000014",
+            "b": "r0000013",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000008",
+        "name": "Arjun Turner",
+        "records": [
+          {
+            "id": "r0000016",
+            "source": "store",
+            "email": "arjun.turner41@example-mail.test",
+            "phone": "5552110460",
+            "name": "arjun turner"
+          },
+          {
+            "id": "r0000017",
+            "source": "crm",
+            "email": "arjun.turner41@example-mail.test",
+            "phone": null,
+            "name": "arjun turner"
+          }
+        ],
+        "cluster_id": "5e5a2764",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000017",
+            "b": "r0000016",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000009",
+        "name": "Larry Turner",
+        "records": [
+          {
+            "id": "r0000018",
+            "source": "crm",
+            "email": null,
+            "phone": "5559375710",
+            "name": "larry turner"
+          },
+          {
+            "id": "r0000019",
+            "source": "web",
+            "email": null,
+            "phone": "5559375710",
+            "name": "larry turner"
+          }
+        ],
+        "cluster_id": "d1565e28",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000019",
+            "b": "r0000018",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000004",
+    "state": "OTHER",
+    "addr_display": "7518 Maple Dr (synthetic)",
+    "members": [
+      {
+        "pid": "P000010",
+        "name": "Janet Walker",
+        "records": [
+          {
+            "id": "r0000020",
+            "source": "web",
+            "email": "janet.walker75@example-mail.test",
+            "phone": "5554679591",
+            "name": "janet walker"
+          },
+          {
+            "id": "r0000021",
+            "source": "store",
+            "email": "janet.walker75+store@example-mail.test",
+            "phone": "5554679591",
+            "name": "janet walker"
+          }
+        ],
+        "cluster_id": "b30d7ecc",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000021",
+            "b": "r0000020",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000011",
+        "name": "Gary Walker",
+        "records": [
+          {
+            "id": "r0000022",
+            "source": "web",
+            "email": "gary.walker97@example-mail.test",
+            "phone": "5552839607",
+            "name": "gary walker"
+          }
+        ],
+        "cluster_id": "5a98e4dc",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000008",
+    "state": "OTHER",
+    "addr_display": "8006 Main St (synthetic)",
+    "members": [
+      {
+        "pid": "P000015",
+        "name": "Ashley Flores",
+        "records": [
+          {
+            "id": "r0000028",
+            "source": "store",
+            "email": "ashley.flores73+store@example-mail.test",
+            "phone": null,
+            "name": "ashley flores"
+          },
+          {
+            "id": "r0000029",
+            "source": "crm",
+            "email": null,
+            "phone": null,
+            "name": "ashleu flores"
+          }
+        ],
+        "cluster_id": "040b03ae",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000029",
+            "b": "r0000028",
+            "type": "probabilistic",
+            "score": 1.0,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000016",
+        "name": "Jack Flores",
+        "records": [
+          {
+            "id": "r0000030",
+            "source": "store",
+            "email": "jack.flores9+store@example-mail.test",
+            "phone": null,
+            "name": "jack flores"
+          },
+          {
+            "id": "r0000031",
+            "source": "crm",
+            "email": null,
+            "phone": null,
+            "name": "jack flores"
+          }
+        ],
+        "cluster_id": "053a4fb4",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000031",
+            "b": "r0000030",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000017",
+        "name": "Daniel Flores",
+        "records": [
+          {
+            "id": "r0000032",
+            "source": "web",
+            "email": "daniel.flores71@example-mail.test",
+            "phone": "5559852897",
+            "name": "xan flores"
+          },
+          {
+            "id": "r0000033",
+            "source": "store",
+            "email": "daniel.flores71@example-mail.test",
+            "phone": "5559852897",
+            "name": "daniel flores"
+          }
+        ],
+        "cluster_id": "97b83a33",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000033",
+            "b": "r0000032",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000033",
+            "b": "r0134409",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0134409",
+            "b": "r0000032",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000018",
+        "name": "Nancy Flores",
+        "records": [
+          {
+            "id": "r0000034",
+            "source": "web",
+            "email": null,
+            "phone": "5556229731",
+            "name": "nancy flores"
+          },
+          {
+            "id": "r0000035",
+            "source": "store",
+            "email": "nancy.flores89@example-mail.test",
+            "phone": "5556229731",
+            "name": "nancy flores"
+          }
+        ],
+        "cluster_id": "5f519501",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000035",
+            "b": "r0000034",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000019",
+        "name": "Olivia Flores",
+        "records": [
+          {
+            "id": "r0000036",
+            "source": "store",
+            "email": "olivia.flores67@example-mail.test",
+            "phone": "5555159166",
+            "name": "olivia flores"
+          },
+          {
+            "id": "r0000037",
+            "source": "web",
+            "email": "olivia.flores67@example-mail.test",
+            "phone": "5555159166",
+            "name": "olivia flrres"
+          },
+          {
+            "id": "r0000038",
+            "source": "crm",
+            "email": "olivia.flores67@example-mail.test",
+            "phone": null,
+            "name": "olivia flores"
+          }
+        ],
+        "cluster_id": "66c73ea7",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000038",
+            "b": "r0000036",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000038",
+            "b": "r0000037",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000037",
+            "b": "r0000036",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000011",
+    "state": "PA",
+    "addr_display": "6736 Lake View Dr (synthetic)",
+    "members": [
+      {
+        "pid": "P000022",
+        "name": "John Brooks",
+        "records": [
+          {
+            "id": "r0000043",
+            "source": "web",
+            "email": "john.brooks44@example-mail.test",
+            "phone": null,
+            "name": "john brooks"
+          }
+        ],
+        "cluster_id": "8019cc2f",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000023",
+        "name": "Kevin Brooks",
+        "records": [
+          {
+            "id": "r0000044",
+            "source": "store",
+            "email": "kevin.brooks69@example-mail.test",
+            "phone": null,
+            "name": "kevin brooks"
+          },
+          {
+            "id": "r0000045",
+            "source": "crm",
+            "email": "kevin.brooks69+crm@example-mail.test",
+            "phone": "5558077999",
+            "name": "kevin brooks"
+          },
+          {
+            "id": "r0000046",
+            "source": "web",
+            "email": null,
+            "phone": "5558077999",
+            "name": "kev brooks"
+          }
+        ],
+        "cluster_id": "991d35f9",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000045",
+            "b": "r0000046",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000045",
+            "b": "r0000044",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000046",
+            "b": "r0000044",
+            "type": "probabilistic",
+            "score": 0.979,
+            "fields": [
+              "first_name",
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000024",
+        "name": "Eric Brooks",
+        "records": [
+          {
+            "id": "r0000047",
+            "source": "crm",
+            "email": "eric.brooks10@example-mail.test",
+            "phone": "5552642635",
+            "name": "eric brooks"
+          }
+        ],
+        "cluster_id": "a9e98c37",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000015",
+    "state": "TX",
+    "addr_display": "1344 Hill Rd (synthetic)",
+    "members": [
+      {
+        "pid": "P000029",
+        "name": "Fatima Morgan",
+        "records": [
+          {
+            "id": "r0000054",
+            "source": "web",
+            "email": "fatima.morgan92@example-mail.test",
+            "phone": null,
+            "name": "fatima iorgan"
+          },
+          {
+            "id": "r0000055",
+            "source": "crm",
+            "email": null,
+            "phone": "5555456272",
+            "name": "fatlma morgan"
+          }
+        ],
+        "cluster_id": "c7617501",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000054",
+            "b": "r0000055",
+            "type": "probabilistic",
+            "score": 0.93,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000030",
+        "name": "Ana Morgan",
+        "records": [
+          {
+            "id": "r0000056",
+            "source": "crm",
+            "email": "ana.morgan41@example-mail.test",
+            "phone": null,
+            "name": "ana morgan"
+          }
+        ],
+        "cluster_id": "b04ea205",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000016",
+    "state": "TX",
+    "addr_display": "9225 Oak Ave (synthetic)",
+    "members": [
+      {
+        "pid": "P000031",
+        "name": "Ana Morales",
+        "records": [
+          {
+            "id": "r0000057",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "ana morales"
+          },
+          {
+            "id": "r0000058",
+            "source": "crm",
+            "email": null,
+            "phone": null,
+            "name": "ana morales"
+          }
+        ],
+        "cluster_id": "a5151fd3",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000057",
+            "b": "r0000058",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000032",
+        "name": "Kenneth Morales",
+        "records": [
+          {
+            "id": "r0000059",
+            "source": "store",
+            "email": "kenneth.morales57@example-mail.test",
+            "phone": null,
+            "name": "kenneth morales"
+          }
+        ],
+        "cluster_id": "dd7803a2",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000033",
+        "name": "Shirley Morales",
+        "records": [
+          {
+            "id": "r0000060",
+            "source": "web",
+            "email": null,
+            "phone": "5556022741",
+            "name": "shirley morales"
+          },
+          {
+            "id": "r0000061",
+            "source": "crm",
+            "email": null,
+            "phone": "5556022741",
+            "name": "shirley morales"
+          },
+          {
+            "id": "r0000062",
+            "source": "store",
+            "email": null,
+            "phone": null,
+            "name": "shirley morales"
+          }
+        ],
+        "cluster_id": "3dedd1d0",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000061",
+            "b": "r0000060",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000061",
+            "b": "r0000062",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000060",
+            "b": "r0000062",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000034",
+        "name": "Daniel Morales",
+        "records": [
+          {
+            "id": "r0000063",
+            "source": "store",
+            "email": "daniel.morales14@example-mail.test",
+            "phone": null,
+            "name": "daniel morales"
+          },
+          {
+            "id": "r0000064",
+            "source": "web",
+            "email": "daniel.morales14@example-mail.test",
+            "phone": null,
+            "name": "daniel morales"
+          }
+        ],
+        "cluster_id": "9ca185d6",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000064",
+            "b": "r0000063",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000035",
+        "name": "Eric Morales",
+        "records": [
+          {
+            "id": "r0000065",
+            "source": "store",
+            "email": "eric.morales27+store@example-mail.test",
+            "phone": null,
+            "name": "eric morales"
+          },
+          {
+            "id": "r0000066",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "eric morales"
+          }
+        ],
+        "cluster_id": "4e48ba9d",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000065",
+            "b": "r0000066",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000018",
+    "state": "OTHER",
+    "addr_display": "4292 Maple Dr (synthetic)",
+    "members": [
+      {
+        "pid": "P000037",
+        "name": "Joseph Cook",
+        "records": [
+          {
+            "id": "r0000070",
+            "source": "crm",
+            "email": "joseph.cook89@example-mail.test",
+            "phone": null,
+            "name": "joseph cook"
+          },
+          {
+            "id": "r0000071",
+            "source": "store",
+            "email": "joseph.cook89@example-mail.test",
+            "phone": null,
+            "name": "joseph cook"
+          }
+        ],
+        "cluster_id": "008de0ea",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000070",
+            "b": "r0000071",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000038",
+        "name": "Rohan Cook",
+        "records": [
+          {
+            "id": "r0000072",
+            "source": "web",
+            "email": "rohan.cook71@example-mail.test",
+            "phone": "5553138181",
+            "name": "rohan cook"
+          },
+          {
+            "id": "r0000073",
+            "source": "store",
+            "email": "rohan.cook71@example-mail.test",
+            "phone": "5553138181",
+            "name": "rohan cook"
+          }
+        ],
+        "cluster_id": "6892514f",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000072",
+            "b": "r0000073",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000039",
+        "name": "Steven Cook",
+        "records": [
+          {
+            "id": "r0000074",
+            "source": "web",
+            "email": "steven.cook6+web@example-mail.test",
+            "phone": null,
+            "name": "steven cook"
+          }
+        ],
+        "cluster_id": "a97741f4",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000020",
+    "state": "OTHER",
+    "addr_display": "407 Maple Dr (synthetic)",
+    "members": [
+      {
+        "pid": "P000041",
+        "name": "Eric Iyer",
+        "records": [
+          {
+            "id": "r0000077",
+            "source": "web",
+            "email": "eric.iyer90@example-mail.test",
+            "phone": "5551649691",
+            "name": "eric iyer"
+          },
+          {
+            "id": "r0000078",
+            "source": "store",
+            "email": "eric.iyer90@example-mail.test",
+            "phone": "5551649691",
+            "name": "eric iyer"
+          }
+        ],
+        "cluster_id": "d2376007",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000077",
+            "b": "r0000078",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000077",
+            "b": "r0000080",
+            "type": "probabilistic",
+            "score": 0.927,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000080",
+            "b": "r0000078",
+            "type": "probabilistic",
+            "score": 0.927,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000042",
+        "name": "Emily Iyer",
+        "records": [
+          {
+            "id": "r0000079",
+            "source": "web",
+            "email": null,
+            "phone": "5554818418",
+            "name": "emily iyer"
+          },
+          {
+            "id": "r0000080",
+            "source": "crm",
+            "email": null,
+            "phone": null,
+            "name": "emily iyer"
+          }
+        ],
+        "cluster_id": "d2376007",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000077",
+            "b": "r0000080",
+            "type": "probabilistic",
+            "score": 0.927,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000080",
+            "b": "r0000079",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000080",
+            "b": "r0000078",
+            "type": "probabilistic",
+            "score": 0.927,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000043",
+        "name": "Michael Iyer",
+        "records": [
+          {
+            "id": "r0000081",
+            "source": "crm",
+            "email": "michael.iyer52@example-mail.test",
+            "phone": "5552164686",
+            "name": "mike iyer"
+          },
+          {
+            "id": "r0000082",
+            "source": "web",
+            "email": "michael.iyer52+web@example-mail.test",
+            "phone": "5552164686",
+            "name": "mike iydr"
+          },
+          {
+            "id": "r0000083",
+            "source": "store",
+            "email": "michael.iyer52+store@example-mail.test",
+            "phone": null,
+            "name": "michael iyer"
+          }
+        ],
+        "cluster_id": "bdbcb1a4",
+        "correctly_unified": false,
+        "match_edges": [
+          {
+            "a": "r0000081",
+            "b": "r0000082",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000044",
+        "name": "Sandra Iyer",
+        "records": [
+          {
+            "id": "r0000084",
+            "source": "store",
+            "email": "sandra.iyer69@example-mail.test",
+            "phone": "5551463060",
+            "name": "sandra wyer"
+          },
+          {
+            "id": "r0000085",
+            "source": "crm",
+            "email": null,
+            "phone": "5551463060",
+            "name": "sandra iyen"
+          },
+          {
+            "id": "r0000086",
+            "source": "web",
+            "email": "sandra.iyer69@example-mail.test",
+            "phone": "5551463060",
+            "name": "sandra iyer"
+          }
+        ],
+        "cluster_id": "82cc49dc",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000084",
+            "b": "r0000086",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000084",
+            "b": "r0000085",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000085",
+            "b": "r0000086",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000023",
+    "state": "OTHER",
+    "addr_display": "2042 Park Blvd (synthetic)",
+    "members": [
+      {
+        "pid": "P000047",
+        "name": "Donna Robinson",
+        "records": [
+          {
+            "id": "r0000091",
+            "source": "crm",
+            "email": "donna.robinson71@example-mail.test",
+            "phone": "5558053918",
+            "name": "donna robinson"
+          }
+        ],
+        "cluster_id": "17c55b84",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000048",
+        "name": "Rachel Robinson",
+        "records": [
+          {
+            "id": "r0000092",
+            "source": "crm",
+            "email": null,
+            "phone": "5551006810",
+            "name": "rachel robinson"
+          },
+          {
+            "id": "r0000093",
+            "source": "store",
+            "email": "rachel.robinson73@example-mail.test",
+            "phone": "5551006810",
+            "name": "rhchel robinson"
+          }
+        ],
+        "cluster_id": "8bd8b6db",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000093",
+            "b": "r0124801",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000093",
+            "b": "r0124802",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000093",
+            "b": "r0000092",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000024",
+    "state": "FL",
+    "addr_display": "9503 2Nd St (synthetic)",
+    "members": [
+      {
+        "pid": "P000049",
+        "name": "Gary Gomez",
+        "records": [
+          {
+            "id": "r0000094",
+            "source": "store",
+            "email": "gary.gomez95@example-mail.test",
+            "phone": "5552422633",
+            "name": "gary gomez"
+          },
+          {
+            "id": "r0000095",
+            "source": "crm",
+            "email": "gary.gomez95@example-mail.test",
+            "phone": "5552422633",
+            "name": "gary gomez"
+          }
+        ],
+        "cluster_id": "2834ced1",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000095",
+            "b": "r0000094",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000050",
+        "name": "Rebecca Gomez",
+        "records": [
+          {
+            "id": "r0000096",
+            "source": "web",
+            "email": "rebecca.gomez12@example-mail.test",
+            "phone": null,
+            "name": "rebecca gomez"
+          }
+        ],
+        "cluster_id": "bfa6cb5d",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000025",
+    "state": "OTHER",
+    "addr_display": "3681 Cedar Ln (synthetic)",
+    "members": [
+      {
+        "pid": "P000051",
+        "name": "Jeffrey Brown",
+        "records": [
+          {
+            "id": "r0000097",
+            "source": "store",
+            "email": "jeffrey.brown81@example-mail.test",
+            "phone": "5557442089",
+            "name": "jeffrey brown"
+          },
+          {
+            "id": "r0000098",
+            "source": "crm",
+            "email": "jeffrey.brown81+crm@example-mail.test",
+            "phone": "5557442089",
+            "name": "jeffrey brown"
+          }
+        ],
+        "cluster_id": "30c398f7",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000097",
+            "b": "r0000098",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000052",
+        "name": "Donna Brown",
+        "records": [
+          {
+            "id": "r0000099",
+            "source": "web",
+            "email": "donna.brown1@example-mail.test",
+            "phone": null,
+            "name": "donna brown"
+          },
+          {
+            "id": "r0000100",
+            "source": "crm",
+            "email": "donna.brown1@example-mail.test",
+            "phone": null,
+            "name": "donna brown"
+          },
+          {
+            "id": "r0000101",
+            "source": "store",
+            "email": "donna.brown1@example-mail.test",
+            "phone": null,
+            "name": "donna broon"
+          }
+        ],
+        "cluster_id": "5a3cf936",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000100",
+            "b": "r0000099",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000100",
+            "b": "r0000101",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000099",
+            "b": "r0000101",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000053",
+        "name": "Tyler Brown",
+        "records": [
+          {
+            "id": "r0000102",
+            "source": "web",
+            "email": "tyler.brown23@example-mail.test",
+            "phone": null,
+            "name": "tyler brown"
+          }
+        ],
+        "cluster_id": "56d4c3ac",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000026",
+    "state": "GA",
+    "addr_display": "9133 Cedar Ln (synthetic)",
+    "members": [
+      {
+        "pid": "P000054",
+        "name": "Virginia Evans",
+        "records": [
+          {
+            "id": "r0000103",
+            "source": "web",
+            "email": "evans476@example-mail.test",
+            "phone": null,
+            "name": "virginia evans"
+          },
+          {
+            "id": "r0000104",
+            "source": "store",
+            "email": "evans476@example-mail.test",
+            "phone": "5559468772",
+            "name": "virginia evans"
+          }
+        ],
+        "cluster_id": "e61c81e5",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000104",
+            "b": "r0000103",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000055",
+        "name": "Sita Evans",
+        "records": [
+          {
+            "id": "r0000105",
+            "source": "web",
+            "email": "sita.evans21+web@example-mail.test",
+            "phone": null,
+            "name": "sita evans"
+          },
+          {
+            "id": "r0000106",
+            "source": "store",
+            "email": null,
+            "phone": null,
+            "name": "sita evans"
+          }
+        ],
+        "cluster_id": "3f9baf48",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000106",
+            "b": "r0000105",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000056",
+        "name": "Amanda Evans",
+        "records": [
+          {
+            "id": "r0000107",
+            "source": "store",
+            "email": "amanda.evans82@example-mail.test",
+            "phone": "5559745959",
+            "name": "amanda evans"
+          }
+        ],
+        "cluster_id": "9ea67bc6",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000027",
+    "state": "FL",
+    "addr_display": "7207 Oak Ave (synthetic)",
+    "members": [
+      {
+        "pid": "P000057",
+        "name": "Laura Jackson",
+        "records": [
+          {
+            "id": "r0000108",
+            "source": "store",
+            "email": "laura.jackson20@example-mail.test",
+            "phone": "5553563646",
+            "name": "laura jackson"
+          },
+          {
+            "id": "r0000109",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "laura jackson"
+          }
+        ],
+        "cluster_id": "471699e9",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000109",
+            "b": "r0000108",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000058",
+        "name": "David Jackson",
+        "records": [
+          {
+            "id": "r0000110",
+            "source": "web",
+            "email": "david.jackson43@example-mail.test",
+            "phone": "5557975534",
+            "name": "david jackson"
+          },
+          {
+            "id": "r0000111",
+            "source": "crm",
+            "email": "david.jackson43@example-mail.test",
+            "phone": "5557975534",
+            "name": "david jackson"
+          }
+        ],
+        "cluster_id": "b1dd6467",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0086859",
+            "b": "r0000110",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0086859",
+            "b": "r0000111",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000111",
+            "b": "r0000110",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000029",
+    "state": "FL",
+    "addr_display": "7957 Main St (synthetic)",
+    "members": [
+      {
+        "pid": "P000060",
+        "name": "Samantha Scott",
+        "records": [
+          {
+            "id": "r0000115",
+            "source": "store",
+            "email": "samantha.scott60@example-mail.test",
+            "phone": null,
+            "name": "samantha scott"
+          },
+          {
+            "id": "r0000116",
+            "source": "crm",
+            "email": "samantha.scott60@example-mail.test",
+            "phone": null,
+            "name": "samantha scott"
+          }
+        ],
+        "cluster_id": "f655fd40",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000115",
+            "b": "r0000116",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000061",
+        "name": "Timothy Scott",
+        "records": [
+          {
+            "id": "r0000117",
+            "source": "crm",
+            "email": "timothy.scott85@example-mail.test",
+            "phone": null,
+            "name": "timothy scott"
+          }
+        ],
+        "cluster_id": "3d50fbe7",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000034",
+    "state": "OH",
+    "addr_display": "6072 Oak Ave (synthetic)",
+    "members": [
+      {
+        "pid": "P000068",
+        "name": "Neha Cox",
+        "records": [
+          {
+            "id": "r0000127",
+            "source": "crm",
+            "email": "neha.cox56@example-mail.test",
+            "phone": null,
+            "name": "neha cox"
+          },
+          {
+            "id": "r0000128",
+            "source": "web",
+            "email": "neha.cox56@example-mail.test",
+            "phone": null,
+            "name": "neha cox"
+          },
+          {
+            "id": "r0000129",
+            "source": "store",
+            "email": "neha.cox56@example-mail.test",
+            "phone": null,
+            "name": "neha cox"
+          }
+        ],
+        "cluster_id": "af7f7226",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000127",
+            "b": "r0000128",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000127",
+            "b": "r0000129",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000128",
+            "b": "r0000129",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000069",
+        "name": "Christine Cox",
+        "records": [
+          {
+            "id": "r0000130",
+            "source": "store",
+            "email": "christine.cox67@example-mail.test",
+            "phone": null,
+            "name": "christine cox"
+          }
+        ],
+        "cluster_id": "653cd872",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000037",
+    "state": "FL",
+    "addr_display": "4582 Park Blvd (synthetic)",
+    "members": [
+      {
+        "pid": "P000072",
+        "name": "William Johnson",
+        "records": [
+          {
+            "id": "r0000135",
+            "source": "store",
+            "email": null,
+            "phone": "5555031966",
+            "name": "william johnson"
+          },
+          {
+            "id": "r0000136",
+            "source": "web",
+            "email": "william.johnson53+web@example-mail.test",
+            "phone": "5555031966",
+            "name": "william johnson"
+          }
+        ],
+        "cluster_id": "e11af7a8",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000135",
+            "b": "r0000136",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000135",
+            "b": "r0141563",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0141563",
+            "b": "r0000136",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000073",
+        "name": "Emma Johnson",
+        "records": [
+          {
+            "id": "r0000137",
+            "source": "store",
+            "email": "emma.johnson3@example-mail.test",
+            "phone": null,
+            "name": "emma johnson"
+          },
+          {
+            "id": "r0000138",
+            "source": "web",
+            "email": "emma.johnson3@example-mail.test",
+            "phone": "5554717770",
+            "name": "emma jbhnson"
+          }
+        ],
+        "cluster_id": "2c952b29",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000138",
+            "b": "r0000137",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000038",
+    "state": "FL",
+    "addr_display": "9529 2Nd St (synthetic)",
+    "members": [
+      {
+        "pid": "P000074",
+        "name": "Janet Cook",
+        "records": [
+          {
+            "id": "r0000139",
+            "source": "store",
+            "email": "janet.cook46@example-mail.test",
+            "phone": null,
+            "name": "janct cook"
+          },
+          {
+            "id": "r0000140",
+            "source": "crm",
+            "email": "janet.cook46@example-mail.test",
+            "phone": null,
+            "name": "janet cook"
+          }
+        ],
+        "cluster_id": "fdc58c60",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000139",
+            "b": "r0000140",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000075",
+        "name": "Anna Cook",
+        "records": [
+          {
+            "id": "r0000141",
+            "source": "store",
+            "email": "anna.cook25@example-mail.test",
+            "phone": null,
+            "name": "anna cook"
+          },
+          {
+            "id": "r0000142",
+            "source": "web",
+            "email": "anna.cook25@example-mail.test",
+            "phone": "5559990305",
+            "name": "anna cook"
+          }
+        ],
+        "cluster_id": "9505e301",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000141",
+            "b": "r0000142",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000039",
+    "state": "OTHER",
+    "addr_display": "3139 Cedar Ln (synthetic)",
+    "members": [
+      {
+        "pid": "P000076",
+        "name": "Susan Sanchez",
+        "records": [
+          {
+            "id": "r0000143",
+            "source": "store",
+            "email": null,
+            "phone": "5557054579",
+            "name": "susan sanchez"
+          }
+        ],
+        "cluster_id": "0953a46b",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000077",
+        "name": "Steven Sanchez",
+        "records": [
+          {
+            "id": "r0000144",
+            "source": "store",
+            "email": "steven.sanchez69@example-mail.test",
+            "phone": null,
+            "name": "steve sanchez"
+          },
+          {
+            "id": "r0000145",
+            "source": "crm",
+            "email": "steven.sanchez69+crm@example-mail.test",
+            "phone": "5551763626",
+            "name": "steven sanchez"
+          }
+        ],
+        "cluster_id": "2d7af167",
+        "correctly_unified": false,
+        "match_edges": []
+      },
+      {
+        "pid": "P000078",
+        "name": "Stephen Sanchez",
+        "records": [
+          {
+            "id": "r0000146",
+            "source": "store",
+            "email": "stephen.sanchez17@example-mail.test",
+            "phone": "5559235577",
+            "name": "stephen sanchez"
+          }
+        ],
+        "cluster_id": "ae35053a",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000079",
+        "name": "Omar Sanchez",
+        "records": [
+          {
+            "id": "r0000147",
+            "source": "web",
+            "email": "omar.sanchez37@example-mail.test",
+            "phone": null,
+            "name": "omar sanchez"
+          }
+        ],
+        "cluster_id": "be16806e",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000080",
+        "name": "Karen Sanchez",
+        "records": [
+          {
+            "id": "r0000148",
+            "source": "store",
+            "email": "karen.sanchez62@example-mail.test",
+            "phone": "5552096280",
+            "name": "karen sanchez"
+          },
+          {
+            "id": "r0000149",
+            "source": "web",
+            "email": "karen.sanchez62@example-mail.test",
+            "phone": "5552096280",
+            "name": "karen sanchez"
+          }
+        ],
+        "cluster_id": "98a1b1cd",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000149",
+            "b": "r0000148",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000040",
+    "state": "TX",
+    "addr_display": "879 Maple Dr (synthetic)",
+    "members": [
+      {
+        "pid": "P000081",
+        "name": "Maria Khan",
+        "records": [
+          {
+            "id": "r0000150",
+            "source": "crm",
+            "email": null,
+            "phone": "5557982241",
+            "name": "maria kham"
+          },
+          {
+            "id": "r0000151",
+            "source": "web",
+            "email": null,
+            "phone": "5557982241",
+            "name": "maria khan"
+          }
+        ],
+        "cluster_id": "01c32eec",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000150",
+            "b": "r0000151",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000082",
+        "name": "Tyler Khan",
+        "records": [
+          {
+            "id": "r0000152",
+            "source": "web",
+            "email": "tyler.khan58@example-mail.test",
+            "phone": null,
+            "name": "tyler khan"
+          },
+          {
+            "id": "r0000153",
+            "source": "store",
+            "email": "tyler.khan58@example-mail.test",
+            "phone": null,
+            "name": "tyler khan"
+          },
+          {
+            "id": "r0000154",
+            "source": "crm",
+            "email": "tyler.khan58@example-mail.test",
+            "phone": null,
+            "name": "tyler khan"
+          }
+        ],
+        "cluster_id": "58ff9cc0",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000154",
+            "b": "r0000152",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000154",
+            "b": "r0000153",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000153",
+            "b": "r0000152",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000041",
+    "state": "OTHER",
+    "addr_display": "7026 Park Blvd (synthetic)",
+    "members": [
+      {
+        "pid": "P000083",
+        "name": "Jerry Kelly",
+        "records": [
+          {
+            "id": "r0000155",
+            "source": "crm",
+            "email": "jerry.kelly28@example-mail.test",
+            "phone": "5552362099",
+            "name": "jersy kewly"
+          },
+          {
+            "id": "r0000156",
+            "source": "web",
+            "email": "jerry.kelly28@example-mail.test",
+            "phone": "5552362099",
+            "name": "jerry kelly"
+          },
+          {
+            "id": "r0000157",
+            "source": "store",
+            "email": "jerry.kelly28+store@example-mail.test",
+            "phone": "5552362099",
+            "name": "jerry kelly"
+          }
+        ],
+        "cluster_id": "75bda120",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000157",
+            "b": "r0000155",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000157",
+            "b": "r0000156",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000155",
+            "b": "r0000156",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000084",
+        "name": "Kevin Kelly",
+        "records": [
+          {
+            "id": "r0000158",
+            "source": "store",
+            "email": "kevin.kelly10@example-mail.test",
+            "phone": "5557853787",
+            "name": "fev kelly"
+          },
+          {
+            "id": "r0000159",
+            "source": "web",
+            "email": "kevin.kelly10@example-mail.test",
+            "phone": "5557853787",
+            "name": "kevin kelly"
+          }
+        ],
+        "cluster_id": "88c72e8c",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000158",
+            "b": "r0000159",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000042",
+    "state": "OTHER",
+    "addr_display": "4772 Main St (synthetic)",
+    "members": [
+      {
+        "pid": "P000085",
+        "name": "Elizabeth Clark",
+        "records": [
+          {
+            "id": "r0000160",
+            "source": "store",
+            "email": "elizabeth.clark34@example-mail.test",
+            "phone": null,
+            "name": "elizabeth clark"
+          },
+          {
+            "id": "r0000161",
+            "source": "crm",
+            "email": "elizabeth.clark34@example-mail.test",
+            "phone": null,
+            "name": "elizabeth clark"
+          }
+        ],
+        "cluster_id": "d6ba9267",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000161",
+            "b": "r0000160",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000086",
+        "name": "Edward Clark",
+        "records": [
+          {
+            "id": "r0000162",
+            "source": "web",
+            "email": null,
+            "phone": "5555456573",
+            "name": "edward clark"
+          },
+          {
+            "id": "r0000163",
+            "source": "store",
+            "email": "edward.clark29@example-mail.test",
+            "phone": "5555456573",
+            "name": "edward clarn"
+          }
+        ],
+        "cluster_id": "0347771d",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000162",
+            "b": "r0000163",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000043",
+    "state": "TX",
+    "addr_display": "2719 Park Blvd (synthetic)",
+    "members": [
+      {
+        "pid": "P000087",
+        "name": "Amanda Price",
+        "records": [
+          {
+            "id": "r0000164",
+            "source": "store",
+            "email": "amanda.price89@example-mail.test",
+            "phone": null,
+            "name": "amanda price"
+          },
+          {
+            "id": "r0000165",
+            "source": "crm",
+            "email": "amanda.price89@example-mail.test",
+            "phone": "5557752972",
+            "name": "amanda price"
+          },
+          {
+            "id": "r0000166",
+            "source": "web",
+            "email": "amanda.price89+web@example-mail.test",
+            "phone": "5557752972",
+            "name": "amanda price"
+          }
+        ],
+        "cluster_id": "e6e46a1f",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000168",
+            "b": "r0000165",
+            "type": "probabilistic",
+            "score": 0.933,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000166",
+            "b": "r0011871",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000166",
+            "b": "r0000165",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000166",
+            "b": "r0000164",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000164",
+            "b": "r0000165",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000164",
+            "b": "r0011872",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000088",
+        "name": "Rebecca Price",
+        "records": [
+          {
+            "id": "r0000167",
+            "source": "crm",
+            "email": "rebecca.price77@example-mail.test",
+            "phone": "5558248238",
+            "name": "rebecca price"
+          }
+        ],
+        "cluster_id": "f741a345",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000089",
+        "name": "Angela Price",
+        "records": [
+          {
+            "id": "r0000168",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "angela price"
+          },
+          {
+            "id": "r0000169",
+            "source": "crm",
+            "email": "angela.price87@example-mail.test",
+            "phone": null,
+            "name": "angela price"
+          }
+        ],
+        "cluster_id": "e6e46a1f",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000168",
+            "b": "r0000169",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000168",
+            "b": "r0000165",
+            "type": "probabilistic",
+            "score": 0.933,
+            "fields": [
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000090",
+        "name": "Jerry Price",
+        "records": [
+          {
+            "id": "r0000170",
+            "source": "web",
+            "email": "jerry.price35@example-mail.test",
+            "phone": "5553939212",
+            "name": "jerry price"
+          },
+          {
+            "id": "r0000171",
+            "source": "store",
+            "email": null,
+            "phone": "5553939212",
+            "name": "jerry price"
+          }
+        ],
+        "cluster_id": "5fa58616",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000171",
+            "b": "r0000170",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000044",
+    "state": "OTHER",
+    "addr_display": "4558 Maple Dr (synthetic)",
+    "members": [
+      {
+        "pid": "P000091",
+        "name": "Maria Roberts",
+        "records": [
+          {
+            "id": "r0000172",
+            "source": "crm",
+            "email": "maria.roberts53@example-mail.test",
+            "phone": "5552754894",
+            "name": "maria roberts"
+          }
+        ],
+        "cluster_id": "7ba37d14",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000092",
+        "name": "Andrew Roberts",
+        "records": [
+          {
+            "id": "r0000173",
+            "source": "crm",
+            "email": "andrew.roberts64@example-mail.test",
+            "phone": "5557718473",
+            "name": "andrew roberts"
+          },
+          {
+            "id": "r0000174",
+            "source": "store",
+            "email": "andrew.roberts64@example-mail.test",
+            "phone": "5557718473",
+            "name": "andrew roberts"
+          },
+          {
+            "id": "r0000175",
+            "source": "web",
+            "email": "andrew.roberts64@example-mail.test",
+            "phone": "5557718473",
+            "name": "andrew roberts"
+          }
+        ],
+        "cluster_id": "9ee7073e",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000174",
+            "b": "r0000173",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000174",
+            "b": "r0000175",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000175",
+            "b": "r0000173",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000045",
+    "state": "NJ",
+    "addr_display": "7452 Oak Ave (synthetic)",
+    "members": [
+      {
+        "pid": "P000093",
+        "name": "Rebecca White",
+        "records": [
+          {
+            "id": "r0000176",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "rebecca white"
+          }
+        ],
+        "cluster_id": "c5d6e2cc",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000094",
+        "name": "Linda White",
+        "records": [
+          {
+            "id": "r0000177",
+            "source": "crm",
+            "email": "linda.white97@example-mail.test",
+            "phone": "5558416216",
+            "name": "linda white"
+          }
+        ],
+        "cluster_id": "3f16d920",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000095",
+        "name": "Jose White",
+        "records": [
+          {
+            "id": "r0000178",
+            "source": "crm",
+            "email": "jose.white17+crm@example-mail.test",
+            "phone": null,
+            "name": "jose white"
+          },
+          {
+            "id": "r0000179",
+            "source": "web",
+            "email": "jose.white17@example-mail.test",
+            "phone": null,
+            "name": "jose white"
+          }
+        ],
+        "cluster_id": "e0dfe716",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000179",
+            "b": "r0000178",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000096",
+        "name": "Catherine White",
+        "records": [
+          {
+            "id": "r0000180",
+            "source": "web",
+            "email": null,
+            "phone": "5555014745",
+            "name": "catherine white"
+          }
+        ],
+        "cluster_id": "79ed8268",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000046",
+    "state": "NY",
+    "addr_display": "225 Hill Rd (synthetic)",
+    "members": [
+      {
+        "pid": "P000097",
+        "name": "Jeffrey Taylor",
+        "records": [
+          {
+            "id": "r0000181",
+            "source": "store",
+            "email": null,
+            "phone": null,
+            "name": "jeffrey laylor"
+          },
+          {
+            "id": "r0000182",
+            "source": "crm",
+            "email": null,
+            "phone": "5553583206",
+            "name": "jeffrey taylor"
+          }
+        ],
+        "cluster_id": "7e5446fe",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000182",
+            "b": "r0000181",
+            "type": "probabilistic",
+            "score": 0.963,
+            "fields": [
+              "first_name",
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000098",
+        "name": "Christine Taylor",
+        "records": [
+          {
+            "id": "r0000183",
+            "source": "crm",
+            "email": null,
+            "phone": null,
+            "name": "christine taylor"
+          },
+          {
+            "id": "r0000184",
+            "source": "web",
+            "email": "christine.taylor54@example-mail.test",
+            "phone": null,
+            "name": "christine taylor"
+          }
+        ],
+        "cluster_id": "60cf591f",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000184",
+            "b": "r0000183",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000099",
+        "name": "Ashley Taylor",
+        "records": [
+          {
+            "id": "r0000185",
+            "source": "crm",
+            "email": "ashley.taylor25+crm@example-mail.test",
+            "phone": null,
+            "name": "ashley taylor"
+          }
+        ],
+        "cluster_id": "67cff102",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000047",
+    "state": "OTHER",
+    "addr_display": "1144 Park Blvd (synthetic)",
+    "members": [
+      {
+        "pid": "P000100",
+        "name": "Neha Scott",
+        "records": [
+          {
+            "id": "r0000186",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "neha scott"
+          },
+          {
+            "id": "r0000187",
+            "source": "crm",
+            "email": "neha.scott93@example-mail.test",
+            "phone": null,
+            "name": "neha scott"
+          }
+        ],
+        "cluster_id": "8fe7b7d2",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000186",
+            "b": "r0000187",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000101",
+        "name": "Jason Scott",
+        "records": [
+          {
+            "id": "r0000188",
+            "source": "crm",
+            "email": "jason.scott45@example-mail.test",
+            "phone": "5557328534",
+            "name": "jason scott"
+          },
+          {
+            "id": "r0000189",
+            "source": "web",
+            "email": "jason.scott45@example-mail.test",
+            "phone": null,
+            "name": "jason scott"
+          },
+          {
+            "id": "r0000190",
+            "source": "store",
+            "email": "jason.scott45@example-mail.test",
+            "phone": "5557328534",
+            "name": "jason scott"
+          }
+        ],
+        "cluster_id": "19af1423",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000189",
+            "b": "r0000188",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000189",
+            "b": "r0000190",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000190",
+            "b": "r0000188",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000048",
+    "state": "NY",
+    "addr_display": "3091 Cedar Ln (synthetic)",
+    "members": [
+      {
+        "pid": "P000102",
+        "name": "Jennifer Nelson",
+        "records": [
+          {
+            "id": "r0000191",
+            "source": "crm",
+            "email": "jennifer.nelson61@example-mail.test",
+            "phone": null,
+            "name": "jennifer nelson"
+          },
+          {
+            "id": "r0000192",
+            "source": "store",
+            "email": "jennifer.nelson61@example-mail.test",
+            "phone": null,
+            "name": "jennifer nelson"
+          }
+        ],
+        "cluster_id": "329ea92c",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000192",
+            "b": "r0000191",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000192",
+            "b": "r0184253",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000192",
+            "b": "r0184255",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000191",
+            "b": "r0184253",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000191",
+            "b": "r0184255",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000103",
+        "name": "Kimberly Nelson",
+        "records": [
+          {
+            "id": "r0000193",
+            "source": "crm",
+            "email": "kimberly.nelson84@example-mail.test",
+            "phone": null,
+            "name": "kimuerly nelson"
+          }
+        ],
+        "cluster_id": "e226b871",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000049",
+    "state": "TX",
+    "addr_display": "8230 2Nd St (synthetic)",
+    "members": [
+      {
+        "pid": "P000104",
+        "name": "Nicholas Wang",
+        "records": [
+          {
+            "id": "r0000194",
+            "source": "store",
+            "email": null,
+            "phone": "5553418526",
+            "name": "nicholas wang"
+          },
+          {
+            "id": "r0000195",
+            "source": "web",
+            "email": null,
+            "phone": "5553418526",
+            "name": "nicholas wang"
+          }
+        ],
+        "cluster_id": "f5f76879",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000195",
+            "b": "r0000194",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000105",
+        "name": "Emma Wang",
+        "records": [
+          {
+            "id": "r0000196",
+            "source": "store",
+            "email": "emma.wang34@example-mail.test",
+            "phone": null,
+            "name": "emma wang"
+          }
+        ],
+        "cluster_id": "25d3b56f",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000050",
+    "state": "OTHER",
+    "addr_display": "8743 Hill Rd (synthetic)",
+    "members": [
+      {
+        "pid": "P000106",
+        "name": "Laura Howard",
+        "records": [
+          {
+            "id": "r0000197",
+            "source": "store",
+            "email": "laura.howard9@example-mail.test",
+            "phone": "5555821419",
+            "name": "laura howard"
+          },
+          {
+            "id": "r0000198",
+            "source": "crm",
+            "email": "laura.howard9@example-mail.test",
+            "phone": "5555821419",
+            "name": "laura howard"
+          },
+          {
+            "id": "r0000199",
+            "source": "web",
+            "email": "laura.howard9@example-mail.test",
+            "phone": "5555821419",
+            "name": "laura howard"
+          }
+        ],
+        "cluster_id": "da65744a",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000199",
+            "b": "r0000197",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000199",
+            "b": "r0000198",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000197",
+            "b": "r0000198",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000107",
+        "name": "Dennis Howard",
+        "records": [
+          {
+            "id": "r0000200",
+            "source": "store",
+            "email": "dennis.howard13@example-mail.test",
+            "phone": null,
+            "name": "dennis howard"
+          }
+        ],
+        "cluster_id": "b363ef2c",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000108",
+        "name": "Jason Howard",
+        "records": [
+          {
+            "id": "r0000201",
+            "source": "store",
+            "email": "jason.howard39@example-mail.test",
+            "phone": null,
+            "name": "jason howard"
+          },
+          {
+            "id": "r0000202",
+            "source": "crm",
+            "email": "jason.howard39@example-mail.test",
+            "phone": null,
+            "name": "jason howard"
+          }
+        ],
+        "cluster_id": "8ab40187",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000202",
+            "b": "r0000201",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000053",
+    "state": "NY",
+    "addr_display": "6952 Park Blvd (synthetic)",
+    "members": [
+      {
+        "pid": "P000112",
+        "name": "Deborah Dhar",
+        "records": [
+          {
+            "id": "r0000207",
+            "source": "store",
+            "email": "deborah.dhar49@example-mail.test",
+            "phone": null,
+            "name": "deborah dhar"
+          }
+        ],
+        "cluster_id": "fb393a2b",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000113",
+        "name": "Patricia Dhar",
+        "records": [
+          {
+            "id": "r0000208",
+            "source": "store",
+            "email": null,
+            "phone": null,
+            "name": "pat dhar"
+          },
+          {
+            "id": "r0000209",
+            "source": "web",
+            "email": "patricia.dhar36@example-mail.test",
+            "phone": "5551822825",
+            "name": "patricia dhar"
+          }
+        ],
+        "cluster_id": "41d10b33",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000209",
+            "b": "r0000208",
+            "type": "probabilistic",
+            "score": 0.968,
+            "fields": [
+              "first_name",
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000114",
+        "name": "Sita Dhar",
+        "records": [
+          {
+            "id": "r0000210",
+            "source": "web",
+            "email": "sita.dhar30@example-mail.test",
+            "phone": null,
+            "name": "sita dhar"
+          },
+          {
+            "id": "r0000211",
+            "source": "crm",
+            "email": "sita.dhar30@example-mail.test",
+            "phone": "5556910964",
+            "name": "sita dhar"
+          },
+          {
+            "id": "r0000212",
+            "source": "store",
+            "email": "sita.dhar30+store@example-mail.test",
+            "phone": "5556910964",
+            "name": "sita dhar"
+          }
+        ],
+        "cluster_id": "9cce10a2",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000211",
+            "b": "r0000210",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000211",
+            "b": "r0000212",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000210",
+            "b": "r0000212",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000115",
+        "name": "Benjamin Dhar",
+        "records": [
+          {
+            "id": "r0000213",
+            "source": "crm",
+            "email": "benjamin.dhar33@example-mail.test",
+            "phone": null,
+            "name": "benjamin dhar"
+          },
+          {
+            "id": "r0000214",
+            "source": "web",
+            "email": "benjamin.dhar33@example-mail.test",
+            "phone": "5553294774",
+            "name": "benjamin dhar"
+          }
+        ],
+        "cluster_id": "44227466",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000217",
+            "b": "r0000213",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000217",
+            "b": "r0000214",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000214",
+            "b": "r0000213",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000214",
+            "b": "r0000215",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000214",
+            "b": "r0000216",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000216",
+            "b": "r0000213",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000116",
+        "name": "Benjamin Dhar",
+        "records": [
+          {
+            "id": "r0000215",
+            "source": "store",
+            "email": "benjamin.dhar40@example-mail.test",
+            "phone": null,
+            "name": "benjamin dhar"
+          },
+          {
+            "id": "r0000216",
+            "source": "crm",
+            "email": "benjamin.dhar40@example-mail.test",
+            "phone": null,
+            "name": "benjamin dhar"
+          },
+          {
+            "id": "r0000217",
+            "source": "web",
+            "email": "benjamin.dhar40@example-mail.test",
+            "phone": null,
+            "name": "benjamin dhar"
+          }
+        ],
+        "cluster_id": "44227466",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000217",
+            "b": "r0000215",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000217",
+            "b": "r0000216",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000217",
+            "b": "r0000213",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000217",
+            "b": "r0000214",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000214",
+            "b": "r0000215",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000214",
+            "b": "r0000216",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000117",
+        "name": "Justin Dhar",
+        "records": [
+          {
+            "id": "r0000218",
+            "source": "web",
+            "email": "justin.dhar17+web@example-mail.test",
+            "phone": "5555951131",
+            "name": "justin dhar"
+          },
+          {
+            "id": "r0000219",
+            "source": "crm",
+            "email": "justin.dhar17+crm@example-mail.test",
+            "phone": null,
+            "name": "justin dhar"
+          }
+        ],
+        "cluster_id": "614840e0",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000218",
+            "b": "r0000219",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000054",
+    "state": "IL",
+    "addr_display": "3290 Maple Dr (synthetic)",
+    "members": [
+      {
+        "pid": "P000118",
+        "name": "Sita Liu",
+        "records": [
+          {
+            "id": "r0000220",
+            "source": "web",
+            "email": "sita.liu62@example-mail.test",
+            "phone": null,
+            "name": "sita liu"
+          }
+        ],
+        "cluster_id": "bd492bf9",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000119",
+        "name": "Janet Liu",
+        "records": [
+          {
+            "id": "r0000221",
+            "source": "store",
+            "email": null,
+            "phone": "5552263313",
+            "name": "janet liu"
+          },
+          {
+            "id": "r0000222",
+            "source": "web",
+            "email": null,
+            "phone": "5552263313",
+            "name": "janet liu"
+          },
+          {
+            "id": "r0000223",
+            "source": "crm",
+            "email": null,
+            "phone": "5552263313",
+            "name": "janet liu"
+          }
+        ],
+        "cluster_id": "d25b523b",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000222",
+            "b": "r0000221",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000222",
+            "b": "r0000223",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          },
+          {
+            "a": "r0000221",
+            "b": "r0000223",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000056",
+    "state": "OTHER",
+    "addr_display": "6087 Oak Ave (synthetic)",
+    "members": [
+      {
+        "pid": "P000121",
+        "name": "Shirley Moore",
+        "records": [
+          {
+            "id": "r0000226",
+            "source": "web",
+            "email": "shirley.moore9@example-mail.test",
+            "phone": "5558789116",
+            "name": "shirley moore"
+          }
+        ],
+        "cluster_id": "754b7362",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0142814",
+            "b": "r0000226",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0142815",
+            "b": "r0000226",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000122",
+        "name": "Emma Moore",
+        "records": [
+          {
+            "id": "r0000227",
+            "source": "store",
+            "email": "emma.moore5@example-mail.test",
+            "phone": null,
+            "name": "emma moore"
+          },
+          {
+            "id": "r0000228",
+            "source": "crm",
+            "email": "emma.moore5+crm@example-mail.test",
+            "phone": null,
+            "name": "emma moore"
+          }
+        ],
+        "cluster_id": "a0dd246c",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000228",
+            "b": "r0000227",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000060",
+    "state": "OTHER",
+    "addr_display": "3818 2Nd St (synthetic)",
+    "members": [
+      {
+        "pid": "P000128",
+        "name": "Eric Iyer",
+        "records": [
+          {
+            "id": "r0000237",
+            "source": "crm",
+            "email": null,
+            "phone": null,
+            "name": "eric iyer"
+          },
+          {
+            "id": "r0000238",
+            "source": "web",
+            "email": null,
+            "phone": "5553180906",
+            "name": "eric iyer"
+          },
+          {
+            "id": "r0000239",
+            "source": "store",
+            "email": null,
+            "phone": "5553180906",
+            "name": "eric iyer"
+          }
+        ],
+        "cluster_id": "16312ab8",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000237",
+            "b": "r0000238",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000237",
+            "b": "r0000239",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000238",
+            "b": "r0000239",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000129",
+        "name": "Divya Iyer",
+        "records": [
+          {
+            "id": "r0000240",
+            "source": "store",
+            "email": "divya.iyer4@example-mail.test",
+            "phone": null,
+            "name": "divya iyer"
+          }
+        ],
+        "cluster_id": "14531ca4",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000061",
+    "state": "FL",
+    "addr_display": "5305 Main St (synthetic)",
+    "members": [
+      {
+        "pid": "P000130",
+        "name": "Sharon Thompson",
+        "records": [
+          {
+            "id": "r0000241",
+            "source": "crm",
+            "email": "sharon.thompson9+crm@example-mail.test",
+            "phone": "5557074006",
+            "name": "sfaron thompson"
+          }
+        ],
+        "cluster_id": "792aab3e",
+        "correctly_unified": true,
+        "match_edges": []
+      },
+      {
+        "pid": "P000131",
+        "name": "Jason Thompson",
+        "records": [
+          {
+            "id": "r0000242",
+            "source": "crm",
+            "email": "jason.thompson79@example-mail.test",
+            "phone": null,
+            "name": "jason thompson"
+          },
+          {
+            "id": "r0000243",
+            "source": "web",
+            "email": null,
+            "phone": "5559748499",
+            "name": "jason thompson"
+          },
+          {
+            "id": "r0000244",
+            "source": "store",
+            "email": "jason.thompson79@example-mail.test",
+            "phone": null,
+            "name": "jason thompson"
+          }
+        ],
+        "cluster_id": "b1f7d6a8",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000243",
+            "b": "r0000242",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000243",
+            "b": "r0000244",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          },
+          {
+            "a": "r0000244",
+            "b": "r0000242",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000132",
+        "name": "Melissa Thompson",
+        "records": [
+          {
+            "id": "r0000245",
+            "source": "crm",
+            "email": "melissa.thompson62@example-mail.test",
+            "phone": null,
+            "name": "melissa thompson"
+          },
+          {
+            "id": "r0000246",
+            "source": "store",
+            "email": "melissa.thompson62@example-mail.test",
+            "phone": null,
+            "name": "melissa thompson"
+          }
+        ],
+        "cluster_id": "d72217e1",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000245",
+            "b": "r0000246",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000133",
+        "name": "Rachel Thompson",
+        "records": [
+          {
+            "id": "r0000247",
+            "source": "crm",
+            "email": null,
+            "phone": "5552355439",
+            "name": "rachel gray"
+          },
+          {
+            "id": "r0000248",
+            "source": "store",
+            "email": "thompson760@example-mail.test",
+            "phone": null,
+            "name": "rachel thompson"
+          }
+        ],
+        "cluster_id": "e49983d7",
+        "correctly_unified": false,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000062",
+    "state": "CA",
+    "addr_display": "2068 Park Blvd (synthetic)",
+    "members": [
+      {
+        "pid": "P000134",
+        "name": "Kimberly Ramos",
+        "records": [
+          {
+            "id": "r0000249",
+            "source": "store",
+            "email": null,
+            "phone": "5558612081",
+            "name": "kimberly ramks"
+          },
+          {
+            "id": "r0000250",
+            "source": "crm",
+            "email": null,
+            "phone": "5558612081",
+            "name": "kimberly ramos"
+          }
+        ],
+        "cluster_id": "2f847fe2",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000249",
+            "b": "r0000250",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000135",
+        "name": "Susan Ramos",
+        "records": [
+          {
+            "id": "r0000251",
+            "source": "store",
+            "email": "susan.ramos84@example-mail.test",
+            "phone": "5554607488",
+            "name": "susan ramos"
+          }
+        ],
+        "cluster_id": "3c0cde83",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000065",
+    "state": "PA",
+    "addr_display": "9114 2Nd St (synthetic)",
+    "members": [
+      {
+        "pid": "P000140",
+        "name": "Henry Castillo",
+        "records": [
+          {
+            "id": "r0000256",
+            "source": "store",
+            "email": "henry.castillo72@example-mail.test",
+            "phone": null,
+            "name": "henry castillo"
+          },
+          {
+            "id": "r0000257",
+            "source": "crm",
+            "email": "henry.castillo72+crm@example-mail.test",
+            "phone": null,
+            "name": "henry castillo"
+          }
+        ],
+        "cluster_id": "79f1f0e3",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000257",
+            "b": "r0000256",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000141",
+        "name": "Scott Castillo",
+        "records": [
+          {
+            "id": "r0000258",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "scott castillo"
+          },
+          {
+            "id": "r0000259",
+            "source": "store",
+            "email": null,
+            "phone": null,
+            "name": "scott castillo"
+          }
+        ],
+        "cluster_id": "0360c933",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000259",
+            "b": "r0000258",
+            "type": "deterministic",
+            "score": 0.9,
+            "fields": [
+              "first_name",
+              "last_name",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000142",
+        "name": "Patricia Castillo",
+        "records": [
+          {
+            "id": "r0000260",
+            "source": "store",
+            "email": "patricia.castillo40@example-mail.test",
+            "phone": null,
+            "name": "pat castillo"
+          },
+          {
+            "id": "r0000261",
+            "source": "web",
+            "email": "patricia.castillo40@example-mail.test",
+            "phone": null,
+            "name": "patricia castillo"
+          },
+          {
+            "id": "r0000262",
+            "source": "crm",
+            "email": "patricia.castillo40@example-mail.test",
+            "phone": null,
+            "name": "patricia castillo"
+          }
+        ],
+        "cluster_id": "6ee72a6a",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000261",
+            "b": "r0000260",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000261",
+            "b": "r0000262",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000260",
+            "b": "r0000262",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000143",
+        "name": "Mary Castillo",
+        "records": [
+          {
+            "id": "r0000263",
+            "source": "crm",
+            "email": "mary.castillo85@example-mail.test",
+            "phone": "5553380261",
+            "name": "mary castillo"
+          },
+          {
+            "id": "r0000264",
+            "source": "web",
+            "email": null,
+            "phone": "5553380261",
+            "name": "mary castillo"
+          }
+        ],
+        "cluster_id": "a15fa936",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000263",
+            "b": "r0000264",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "phone"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000066",
+    "state": "OTHER",
+    "addr_display": "1504 Cedar Ln (synthetic)",
+    "members": [
+      {
+        "pid": "P000144",
+        "name": "Kenneth Mitchell",
+        "records": [
+          {
+            "id": "r0000265",
+            "source": "crm",
+            "email": "kenneth.mitchell42@example-mail.test",
+            "phone": null,
+            "name": "kenneth mitchell"
+          },
+          {
+            "id": "r0000266",
+            "source": "web",
+            "email": "kenneth.mitchell42@example-mail.test",
+            "phone": null,
+            "name": "kenneth mitchell"
+          }
+        ],
+        "cluster_id": "686a8b9e",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000266",
+            "b": "r0000265",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000145",
+        "name": "John Mitchell",
+        "records": [
+          {
+            "id": "r0000267",
+            "source": "web",
+            "email": "john.mitchell97@example-mail.test",
+            "phone": "5552368710",
+            "name": "jack mitchell"
+          },
+          {
+            "id": "r0000268",
+            "source": "crm",
+            "email": "john.mitchell97@example-mail.test",
+            "phone": "5552368710",
+            "name": "jjck mitchell"
+          },
+          {
+            "id": "r0000269",
+            "source": "store",
+            "email": "john.mitchell97@example-mail.test",
+            "phone": "5552368710",
+            "name": "john mitchell"
+          }
+        ],
+        "cluster_id": "fe092bcd",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000269",
+            "b": "r0000267",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000269",
+            "b": "r0000268",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000267",
+            "b": "r0000268",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000146",
+        "name": "Amanda Mitchell",
+        "records": [
+          {
+            "id": "r0000270",
+            "source": "crm",
+            "email": "amanda.mitchell57@example-mail.test",
+            "phone": "5554616647",
+            "name": "amanda mitchell"
+          },
+          {
+            "id": "r0000271",
+            "source": "web",
+            "email": "amanda.mitchell57@example-mail.test",
+            "phone": "5554616647",
+            "name": "amanda mitchell"
+          }
+        ],
+        "cluster_id": "7f29b423",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000270",
+            "b": "r0000271",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hhid": "HH000067",
+    "state": "CA",
+    "addr_display": "7044 Oak Ave (synthetic)",
+    "members": [
+      {
+        "pid": "P000147",
+        "name": "Sharon Brooks",
+        "records": [
+          {
+            "id": "r0000272",
+            "source": "crm",
+            "email": "sharon.brooks6@example-mail.test",
+            "phone": "5551919088",
+            "name": "shjron brooks"
+          },
+          {
+            "id": "r0000273",
+            "source": "web",
+            "email": "sharon.brooks6@example-mail.test",
+            "phone": "5551919088",
+            "name": "sharon brwoks"
+          }
+        ],
+        "cluster_id": "53ed4cc4",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000273",
+            "b": "r0000272",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000148",
+        "name": "Jose Brooks",
+        "records": [
+          {
+            "id": "r0000274",
+            "source": "web",
+            "email": null,
+            "phone": null,
+            "name": "uose brooks"
+          },
+          {
+            "id": "r0000275",
+            "source": "store",
+            "email": "jose.brooks28@example-mail.test",
+            "phone": null,
+            "name": "jose brooks"
+          }
+        ],
+        "cluster_id": "fdd754fd",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000275",
+            "b": "r0000274",
+            "type": "probabilistic",
+            "score": 0.963,
+            "fields": [
+              "first_name",
+              "last_name",
+              "address_line1",
+              "zip_code"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000149",
+        "name": "Grace Brooks",
+        "records": [
+          {
+            "id": "r0000276",
+            "source": "store",
+            "email": "grace.brooks96@example-mail.test",
+            "phone": "5553167376",
+            "name": "grace brooks"
+          }
+        ],
+        "cluster_id": "13208084",
+        "correctly_unified": true,
+        "match_edges": []
+      }
+    ]
+  },
+  {
+    "hhid": "HH000068",
+    "state": "OTHER",
+    "addr_display": "8197 2Nd St (synthetic)",
+    "members": [
+      {
+        "pid": "P000150",
+        "name": "Edward Baker",
+        "records": [
+          {
+            "id": "r0000277",
+            "source": "web",
+            "email": "edward.baker10@example-mail.test",
+            "phone": null,
+            "name": "edward baker"
+          },
+          {
+            "id": "r0000278",
+            "source": "crm",
+            "email": "edward.baker10@example-mail.test",
+            "phone": null,
+            "name": "edward baker"
+          },
+          {
+            "id": "r0000279",
+            "source": "store",
+            "email": "edward.baker10@example-mail.test",
+            "phone": null,
+            "name": "edward baker"
+          }
+        ],
+        "cluster_id": "730e6765",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000277",
+            "b": "r0000278",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000277",
+            "b": "r0000279",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000279",
+            "b": "r0000278",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "pid": "P000151",
+        "name": "Kathleen Baker",
+        "records": [
+          {
+            "id": "r0000280",
+            "source": "crm",
+            "email": "kathleen.baker38@example-mail.test",
+            "phone": "5551349914",
+            "name": "kathleen baker"
+          },
+          {
+            "id": "r0000281",
+            "source": "store",
+            "email": "kathleen.baker38@example-mail.test",
+            "phone": null,
+            "name": "kathleen baker"
+          },
+          {
+            "id": "r0000282",
+            "source": "web",
+            "email": "kathleen.baker38@example-mail.test",
+            "phone": "5551349914",
+            "name": "kathleen baker"
+          }
+        ],
+        "cluster_id": "be084918",
+        "correctly_unified": true,
+        "match_edges": [
+          {
+            "a": "r0000281",
+            "b": "r0000280",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000281",
+            "b": "r0000282",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          },
+          {
+            "a": "r0000280",
+            "b": "r0000282",
+            "type": "deterministic",
+            "score": 1.0,
+            "fields": [
+              "email"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
