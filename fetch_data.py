@@ -179,3 +179,45 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ── FRED daily pulse layer (P1 7c) — key optional, degrades gracefully ──
+def fetch_fred():
+    key = os.environ.get("FRED_API_KEY")
+    if not key:
+        print("FRED: no key, skipping (set FRED_API_KEY for the daily pulse layer)")
+        return {}
+    series = {"UMCSENT": "consumer_sentiment", "CPIAUCSL": "cpi",
+              "RSAFS": "retail_sales", "UNRATE": "unemployment",
+              "PCE": "personal_consumption", "MORTGAGE30US": "mortgage_30y"}
+    out = {}
+    for sid, name in series.items():
+        try:
+            u = (f"https://api.stlouisfed.org/fred/series/observations?series_id={sid}"
+                 f"&api_key={key}&file_type=json&sort_order=desc&limit=13")
+            with urllib.request.urlopen(u, timeout=30) as r:
+                obs = json.load(r)["observations"]
+            pts = [(o["date"], float(o["value"])) for o in obs if o["value"] != "."]
+            if pts:
+                out[name] = {"latest": pts[0][1], "latest_date": pts[0][0],
+                             "year_ago": pts[-1][1] if len(pts) > 12 else None,
+                             "source": f"FRED {sid}"}
+        except Exception as e:
+            print(f"FRED {sid}: {e}")
+    return out
+
+if __name__ == "__main__" or True:
+    try:
+        _data = json.load(open(DATA_PATH))
+        fred = fetch_fred()
+        if fred:
+            _data["fred"] = fred
+            _data["updated"] = datetime.utcnow().isoformat() + "Z"
+            json.dump(_data, open(DATA_PATH, "w"), indent=2)
+        # history per backbone 3a
+        hist = Path(__file__).parent / "data" / "history"
+        hist.mkdir(exist_ok=True)
+        json.dump(_data, open(hist / f"{date.today()}.json", "w"), indent=2)
+        print("history snapshot written")
+    except Exception as e:
+        print("post-processing:", e)

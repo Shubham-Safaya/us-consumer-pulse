@@ -1,0 +1,107 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Persona Builder — US Consumer Pulse</title>
+<meta name="description" content="Interactive audience planning on free US Census ACS data: build a segment, get reach, index vs national, top geographies, and a DSP-style activation spec. Aggregate data only — a methodology demonstration.">
+<style>body{font-family:-apple-system,'Segoe UI',sans-serif;max-width:860px;margin:0 auto;padding:20px;color:#16181d;line-height:1.5}
+h1{font-size:1.5rem}select,button{padding:8px;border-radius:8px;border:1px solid #ccc;font-size:14px;margin:4px 6px 4px 0}
+button{background:#16181d;color:#fff;cursor:pointer}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.card{background:#f7f7f3;border:1px solid #ddd;border-radius:10px;padding:12px;text-align:center}
+.num{font-size:1.5rem;font-weight:700}.lbl{font-size:.65rem;text-transform:uppercase;color:#777;letter-spacing:.07em}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0}td,th{border-bottom:1px solid #e5e5e0;padding:6px;text-align:left}
+.banner{background:#eef6ff;border:1px solid #a9c8ec;border-radius:8px;padding:10px;font-size:13px;margin:12px 0}
+pre{background:#16181d;color:#d9e2ec;padding:12px;border-radius:8px;font-size:12px;overflow:auto}</style></head><body>
+<h1>Persona builder</h1>
+<p class="banner"><strong>Methodology demonstration on aggregate public data.</strong> Every number below is a US Census ACS 5-year estimate —
+aggregate by design, no individuals, nothing targetable. This shows the <em>planning mechanics</em> that commercial identity stacks operate on licensed data.</p>
+<div>
+  <select id="age"><option value="">Any age</option><option value="18-24">18–24</option><option value="25-34">25–34</option><option value="35-44">35–44</option><option value="45-54">45–54</option><option value="55-64">55–64</option><option value="65+">65+</option></select>
+  <select id="sex"><option value="">Any sex</option><option value="m">Male</option><option value="f">Female</option></select>
+  <select id="income"><option value="">Any HH income</option><option value="lt50">&lt;$50k</option><option value="50-100">$50–100k</option><option value="100-200">$100–200k</option><option value="200+">$200k+</option></select>
+  <select id="geo"><option value="us">National</option></select>
+  <button id="run">Build segment</button>
+</div>
+<div class="cards" id="cards"></div>
+<div id="topgeo"></div>
+<div id="spec"></div>
+<p style="font-size:12px;color:#777">Source: Census ACS 5-year (B01001 age×sex, B19001 household income) via api.census.gov —
+key-free at this volume. County choropleth: planned (TopoJSON, no map keys). <a href="index.html">← pulse</a> · <a href="competitors.html">landscape →</a></p>
+<script>
+const API = "https://api.census.gov/data/2022/acs/acs5";
+// B01001 age×sex variable groups (male starts _003E, female _027E)
+const AGE_VARS = {
+ "18-24": {m:["007","008","009","010"], f:["031","032","033","034"]},
+ "25-34": {m:["011","012"], f:["035","036"]},
+ "35-44": {m:["013","014"], f:["037","038"]},
+ "45-54": {m:["015","016"], f:["039","040"]},
+ "55-64": {m:["017","018","019"], f:["041","042","043"]},
+ "65+":   {m:["020","021","022","023","024","025"], f:["044","045","046","047","048","049"]},
+};
+const INC_VARS = { // B19001 buckets
+ "lt50":["002","003","004","005","006","007","008","009","010"],
+ "50-100":["011","012","013"], "100-200":["014","015","016"], "200+":["017"] };
+
+function vars(prefix, codes){ return codes.map(c=>`${prefix}_${c}E`); }
+function segmentVars(age, sex){
+  let out = [];
+  const ages = age ? [age] : Object.keys(AGE_VARS);
+  for (const a of ages){
+    if (sex !== "f") out = out.concat(vars("B01001", AGE_VARS[a].m));
+    if (sex !== "m") out = out.concat(vars("B01001", AGE_VARS[a].f));
+  }
+  return out;
+}
+async function fetchSum(varList, geo){
+  const out = {};
+  for (let i=0;i<varList.length;i+=45){ // API limit ~50 vars
+    const chunk = varList.slice(i,i+45);
+    const r = await fetch(`${API}?get=NAME,${chunk.join(",")}&for=${geo}`);
+    const rows = await r.json();
+    const head = rows[0];
+    for (const row of rows.slice(1)){
+      const name = row[0];
+      out[name] = (out[name]||0) + chunk.reduce((s,v)=> s + (Number(row[head.indexOf(v)])||0), 0);
+    }
+  }
+  return out;
+}
+document.getElementById("run").onclick = async () => {
+  const age = document.getElementById("age").value, sex = document.getElementById("sex").value,
+        inc = document.getElementById("income").value;
+  document.getElementById("cards").innerHTML = "<div class='card'>fetching Census…</div>";
+  try {
+    const segVars = segmentVars(age, sex);
+    const [natSeg, natPop] = await Promise.all([
+      fetchSum(segVars, "us:1"), fetchSum(["B01001_001E".replace("_00","_00")], "us:1").then(o=>o) ]);
+    const natTotal = (await fetchSum(["B01001_001E"], "us:1"))["United States"];
+    let reach = natSeg["United States"];
+    let incShare = 1;
+    if (inc){
+      const incSeg = await fetchSum(vars("B19001", INC_VARS[inc]), "us:1");
+      const incTotal = (await fetchSum(["B19001_001E"], "us:1"))["United States"];
+      incShare = incSeg["United States"] / incTotal;
+      reach = Math.round(reach * incShare); // independence assumption — labeled below
+    }
+    const pct = (100*reach/natTotal);
+    // top states
+    const stSeg = await fetchSum(segVars, "state:*");
+    const stPop = await fetchSum(["B01001_001E"], "state:*");
+    const rows = Object.keys(stSeg).map(s=>{
+      const share = stSeg[s]/stPop[s], idx = Math.round(100*share/(natSeg["United States"]/natTotal));
+      return {s, est: Math.round(stSeg[s]*incShare), idx};
+    }).sort((a,b)=>b.est-a.est).slice(0,10);
+    document.getElementById("cards").innerHTML = `
+      <div class="card"><div class="num">${(reach/1e6).toFixed(1)}M</div><div class="lbl">est. reach</div></div>
+      <div class="card"><div class="num">${pct.toFixed(1)}%</div><div class="lbl">of US pop</div></div>
+      <div class="card"><div class="num">${rows[0]?.idx ?? "—"}</div><div class="lbl">top-state index (100=nat)</div></div>`;
+    document.getElementById("topgeo").innerHTML = "<h2 style='font-size:1.05rem'>Top 10 states</h2><table><tr><th>State</th><th>Est. segment</th><th>Index vs national</th></tr>" +
+      rows.map(r=>`<tr><td>${r.s}</td><td>${r.est.toLocaleString()}</td><td>${r.idx}</td></tr>`).join("") + "</table>" +
+      (inc ? "<p style='font-size:11px;color:#996c00'>Income applied as an independence-assumption multiplier (ACS cross-tabs by age×income need microdata — the synthetic-graph phase adds this honestly).</p>" : "");
+    const spec = { taxonomy_id: `SYN-${(age||"ALL")}-${(sex||"A").toUpperCase()}-${(inc||"ALL")}`,
+      definition: {age: age||"any", sex: sex||"any", household_income: inc||"any", geo: "US"},
+      estimated_reach: reach, source: "Census ACS 5yr 2022, aggregate", synthetic: true,
+      generated: new Date().toISOString().slice(0,10) };
+    document.getElementById("spec").innerHTML = "<h2 style='font-size:1.05rem'>Activation spec (DSP-payload shape — demonstration)</h2><pre>" +
+      JSON.stringify(spec,null,2) + "</pre><button onclick='navigator.clipboard.writeText(JSON.stringify(" + JSON.stringify(JSON.stringify(spec)) + "))'>Copy JSON</button>";
+  } catch(e){ document.getElementById("cards").innerHTML = `<div class='card'>Census API hiccup (${e}). Retry — anonymous quota is generous but not infinite.</div>`; }
+};
+</script></body></html>

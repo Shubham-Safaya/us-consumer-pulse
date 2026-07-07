@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Identity Landscape — US Consumer Pulse</title>
+<meta name="description" content="A neutral, factual comparison of the major consumer identity players: RampID, UID2, LUID, CORE ID and more — and how this site's public-data demos map to what they operate at scale.">
+<style>body{font-family:-apple-system,'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:20px;color:#16181d;line-height:1.55}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border:1px solid #ddd;padding:8px;text-align:left;vertical-align:top}
+th{background:#f4f4f0}h1{font-size:1.5rem}.note{background:#fff8e6;border:1px solid #e6c96e;border-radius:8px;padding:10px;font-size:13px}</style></head><body>
+<h1>The identity landscape, mapped honestly</h1>
+<p class="note">Education, not endorsement or disparagement — public information only. I work with several of these vendors professionally.
+What this site demonstrates on <strong>public data and synthetic people</strong> is the methodology; their moat is licensed PII operated under contract at scale.</p>
+<table>
+<tr><th>Player</th><th>ID type</th><th>Primary data sources (public info)</th><th>Posture</th><th>Activation</th><th>Privacy approach</th></tr>
+<tr><td>LiveRamp</td><td>RampID (person, pseudonymous)</td><td>Offline identity spine, brand files, partner network</td><td>Deterministic-first + modeled</td><td>Broad DSP/platform integrations, clean rooms</td><td>Pseudonymization, data ethics program</td></tr>
+<tr><td>The Trade Desk</td><td>UID2 (hashed email/phone)</td><td>Publisher/advertiser authenticated traffic</td><td>Deterministic (consented login)</td><td>Bidstream-native across UID2 ecosystem</td><td>Open-sourced framework, rotation, opt-out</td></tr>
+<tr><td>TransUnion (TruAudience)</td><td>Person/household IDs</td><td>Credit-adjacent offline spine + digital signals</td><td>Deterministic + probabilistic blend</td><td>Marketing/measurement stacks</td><td>Regulated-data heritage controls</td></tr>
+<tr><td>Experian Marketing</td><td>LUID (household), person IDs</td><td>Consumer marketing file, partnerships</td><td>Deterministic + modeled attributes</td><td>Audience distribution to platforms</td><td>Bureau-grade governance claims</td></tr>
+<tr><td>Epsilon</td><td>CORE ID (person)</td><td>Loyalty/transactional network</td><td>Deterministic-leaning, transaction-anchored</td><td>Owned DSP + publisher network</td><td>First-party emphasis</td></tr>
+<tr><td>Deepsync</td><td>Hashed-identity audiences</td><td>Direct-mail heritage data, digital onboarding</td><td>Deterministic match focus</td><td>Audience onboarding to ad platforms</td><td>Hashing-centric pipeline</td></tr>
+<tr><td>Fetch</td><td>Receipt-linked consumer IDs</td><td>Consented receipt panel (opt-in app)</td><td>Deterministic (declared)</td><td>CPG measurement/audiences</td><td>Explicit opt-in panel</td></tr>
+<tr><td>Fiserv</td><td>Payment-linked cohorts</td><td>Merchant/issuer transaction rails</td><td>Deterministic (payment-grade)</td><td>Card-linked offers, spend insights</td><td>Financial-data controls, aggregation</td></tr>
+</table>
+<h2 style="font-size:1.1rem">How this site maps to that table</h2>
+<p>The <a href="personas.html">persona builder</a> demonstrates the audience-planning column on Census aggregates.
+The synthetic identity graph demo (in progress) demonstrates the ID-resolution column — deterministic waterfall,
+probabilistic fallback, householding — using my open-source engine on manufactured people. Same machinery, zero licensed PII,
+which is exactly why it can be public.</p>
+<p><a href="index.html">← back to the pulse</a> · Sources: public product pages and open documentation of each company, July 2026.</p>
+</body></html>
