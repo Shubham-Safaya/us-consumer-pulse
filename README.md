@@ -9,6 +9,8 @@ A daily-refreshing dashboard of the US consumer's macro identity: inflation (hea
 - `fetch_data.py` (stdlib only, no keys) pulls from the **BLS Public Data API** and **Census ACS** — free, official, public-domain US government statistics.
 - A GitHub Action runs daily at 11:00 UTC, commits `data/data.json` if anything changed.
 - `index.html` (GitHub Pages + Chart.js) renders tiles and charts straight from that JSON. No backend, no build step.
+- Optional `FRED_API_KEY` (free, repo secret) adds a pulse row with retail sales and consumer spending growth. Only the government series (Census, BEA) are displayed, so the page stays public-domain.
+- Each run also saves a dated snapshot to `data/history/`, committed with the data, so past values can be charted later.
 - BLS needs no key. Census now requires a free key for live state data: set `CENSUS_API_KEY` (repo secret + workflow env) to pull live, otherwise the fetcher uses a bundled public-domain ACS 2023 snapshot (state incomes only change once a year, so this stays honest).
 
 ## Data & legal
