@@ -1,0 +1,527 @@
+{
+ "status": "REQUEST_SUCCEEDED",
+ "Results": {
+  "series": [
+   {
+    "seriesID": "CUUR0000SA0",
+    "data": [
+     {
+      "year": "2025",
+      "period": "M13",
+      "value": "999"
+     },
+     {
+      "year": "2025",
+      "period": "M12",
+      "value": "317.250"
+     },
+     {
+      "year": "2025",
+      "period": "M11",
+      "value": "316.500"
+     },
+     {
+      "year": "2025",
+      "period": "M10",
+      "value": "315.750"
+     },
+     {
+      "year": "2025",
+      "period": "M09",
+      "value": "315.000"
+     },
+     {
+      "year": "2025",
+      "period": "M08",
+      "value": "314.250"
+     },
+     {
+      "year": "2025",
+      "period": "M07",
+      "value": "313.500"
+     },
+     {
+      "year": "2025",
+      "period": "M06",
+      "value": "312.750"
+     },
+     {
+      "year": "2025",
+      "period": "M05",
+      "value": "312.000"
+     },
+     {
+      "year": "2025",
+      "period": "M04",
+      "value": "311.250"
+     },
+     {
+      "year": "2025",
+      "period": "M03",
+      "value": "310.500"
+     },
+     {
+      "year": "2025",
+      "period": "M02",
+      "value": "309.750"
+     },
+     {
+      "year": "2025",
+      "period": "M01",
+      "value": "309.000"
+     },
+     {
+      "year": "2024",
+      "period": "M12",
+      "value": "308.250"
+     },
+     {
+      "year": "2024",
+      "period": "M11",
+      "value": "307.500"
+     },
+     {
+      "year": "2024",
+      "period": "M10",
+      "value": "306.750"
+     },
+     {
+      "year": "2024",
+      "period": "M09",
+      "value": "306.000"
+     },
+     {
+      "year": "2024",
+      "period": "M08",
+      "value": "305.250"
+     },
+     {
+      "year": "2024",
+      "period": "M07",
+      "value": "304.500"
+     },
+     {
+      "year": "2024",
+      "period": "M06",
+      "value": "-"
+     },
+     {
+      "year": "2024",
+      "period": "M05",
+      "value": "303.000"
+     },
+     {
+      "year": "2024",
+      "period": "M04",
+      "value": "302.250"
+     },
+     {
+      "year": "2024",
+      "period": "M03",
+      "value": "301.500"
+     },
+     {
+      "year": "2024",
+      "period": "M02",
+      "value": "300.750"
+     },
+     {
+      "year": "2024",
+      "period": "M01",
+      "value": "300.000"
+     }
+    ]
+   },
+   {
+    "seriesID": "CES0500000003",
+    "data": [
+     {
+      "year": "2025",
+      "period": "M13",
+      "value": "999"
+     },
+     {
+      "year": "2025",
+      "period": "M12",
+      "value": "32.300"
+     },
+     {
+      "year": "2025",
+      "period": "M11",
+      "value": "32.200"
+     },
+     {
+      "year": "2025",
+      "period": "M10",
+      "value": "32.100"
+     },
+     {
+      "year": "2025",
+      "period": "M09",
+      "value": "32.000"
+     },
+     {
+      "year": "2025",
+      "period": "M08",
+      "value": "31.900"
+     },
+     {
+      "year": "2025",
+      "period": "M07",
+      "value": "31.800"
+     },
+     {
+      "year": "2025",
+      "period": "M06",
+      "value": "31.700"
+     },
+     {
+      "year": "2025",
+      "period": "M05",
+      "value": "31.600"
+     },
+     {
+      "year": "2025",
+      "period": "M04",
+      "value": "31.500"
+     },
+     {
+      "year": "2025",
+      "period": "M03",
+      "value": "31.400"
+     },
+     {
+      "year": "2025",
+      "period": "M02",
+      "value": "31.300"
+     },
+     {
+      "year": "2025",
+      "period": "M01",
+      "value": "31.200"
+     },
+     {
+      "year": "2024",
+      "period": "M12",
+      "value": "31.100"
+     },
+     {
+      "year": "2024",
+      "period": "M11",
+      "value": "31.000"
+     },
+     {
+      "year": "2024",
+      "period": "M10",
+      "value": "30.900"
+     },
+     {
+      "year": "2024",
+      "period": "M09",
+      "value": "30.800"
+     },
+     {
+      "year": "2024",
+      "period": "M08",
+      "value": "30.700"
+     },
+     {
+      "year": "2024",
+      "period": "M07",
+      "value": "30.600"
+     },
+     {
+      "year": "2024",
+      "period": "M06",
+      "value": "-"
+     },
+     {
+      "year": "2024",
+      "period": "M05",
+      "value": "30.400"
+     },
+     {
+      "year": "2024",
+      "period": "M04",
+      "value": "30.300"
+     },
+     {
+      "year": "2024",
+      "period": "M03",
+      "value": "30.200"
+     },
+     {
+      "year": "2024",
+      "period": "M02",
+      "value": "30.100"
+     },
+     {
+      "year": "2024",
+      "period": "M01",
+      "value": "30.000"
+     }
+    ]
+   },
+   {
+    "seriesID": "LNS14000000",
+    "data": [
+     {
+      "year": "2025",
+      "period": "M13",
+      "value": "999"
+     },
+     {
+      "year": "2025",
+      "period": "M12",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M11",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M10",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M09",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M08",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M07",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M06",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M05",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M04",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M03",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M02",
+      "value": "4.000"
+     },
+     {
+      "year": "2025",
+      "period": "M01",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M12",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M11",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M10",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M09",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M08",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M07",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M06",
+      "value": "-"
+     },
+     {
+      "year": "2024",
+      "period": "M05",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M04",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M03",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M02",
+      "value": "4.000"
+     },
+     {
+      "year": "2024",
+      "period": "M01",
+      "value": "4.000"
+     }
+    ]
+   },
+   {
+    "seriesID": "UNKNOWN_SERIES",
+    "data": [
+     {
+      "year": "2025",
+      "period": "M13",
+      "value": "999"
+     },
+     {
+      "year": "2025",
+      "period": "M12",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M11",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M10",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M09",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M08",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M07",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M06",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M05",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M04",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M03",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M02",
+      "value": "1.000"
+     },
+     {
+      "year": "2025",
+      "period": "M01",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M12",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M11",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M10",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M09",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M08",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M07",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M06",
+      "value": "-"
+     },
+     {
+      "year": "2024",
+      "period": "M05",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M04",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M03",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M02",
+      "value": "1.000"
+     },
+     {
+      "year": "2024",
+      "period": "M01",
+      "value": "1.000"
+     }
+    ]
+   }
+  ]
+ }
+}

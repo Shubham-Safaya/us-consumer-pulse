@@ -206,7 +206,8 @@ def fetch_fred():
             print(f"FRED {sid}: {e}")
     return out
 
-if __name__ == "__main__" or True:
+# Runs after main() when executed as a script; importing the module has no side effects.
+if __name__ == "__main__":
     try:
         _data = json.load(open(DATA_PATH))
         fred = fetch_fred()
